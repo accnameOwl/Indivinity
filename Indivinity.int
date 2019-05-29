@@ -1,0 +1,12 @@
+// BEGIN_INTERNALS
+/*
+MAP_ZOOM: 1.000
+LAST_COMPILE_TIME: 1559085311
+DIR: combat icons inventory mob npc npc\monsters player player\combat screen turf ui world 
+AUTO_FILE_DIR: ON
+MAP_ICON_TYPE: 0
+LAST_COMPILE_VERSION: 512.1468
+WINDOW: npc\monster_ai.dm;map.dmm;npc\monster.dm;#define.dm;icons\player_base.dmi;icons\monster.dmi;npc\monsters\monster1.dm;npc\monsters\monster2.dm;npc\monsters\monster3.dm;dmf.dmf;world\world.dm;ui\castbar.dm;combat\cooldown.dm;combat\enteredcombat.dm;combat\combat_flags.dm
+FILE: combat\combat_flags.dm
+*/
+// END_INTERNALS

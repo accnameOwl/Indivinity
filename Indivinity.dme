@@ -1,0 +1,57 @@
+// DM Environment file for Indivinity.dme.
+// All manual changes should be made outside the BEGIN_ and END_ blocks.
+// New source code should be placed in .dm files: choose File/New --> Code File.
+
+// BEGIN_INTERNALS
+// END_INTERNALS
+
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+#define FILE_DIR "icons"
+#define FILE_DIR "screen"
+#define FILE_DIR "turf"
+// END_FILE_DIR
+
+// BEGIN_PREFERENCES
+#define DEBUG
+// END_PREFERENCES
+
+// BEGIN_INCLUDE
+#include "#define.dm"
+#include "types.dm"
+#include "map.dmm"
+#include "combat\combat_flags.dm"
+#include "combat\cooldown.dm"
+#include "combat\damage.dm"
+#include "combat\enteredcombat.dm"
+#include "combat\exitedcombat.dm"
+#include "combat\ondeath.dm"
+#include "combat\onrespawn.dm"
+#include "combat\regeneration.dm"
+#include "combat\stat.dm"
+#include "combat\turnghost.dm"
+#include "inventory\inventory.dm"
+#include "mob\del.dm"
+#include "mob\login.dm"
+#include "mob\logout.dm"
+#include "mob\new.dm"
+#include "mob\read.dm"
+#include "mob\write.dm"
+#include "npc\monster.dm"
+#include "npc\monster_ai.dm"
+#include "npc\npc.dm"
+#include "npc\monsters\monster1.dm"
+#include "npc\monsters\monster2.dm"
+#include "npc\monsters\monster3.dm"
+#include "player\onlogin.dm"
+#include "player\stats.dm"
+#include "player\texture.dm"
+#include "player\combat\attack.dm"
+#include "screen\effects.dm"
+#include "turf\outside.dm"
+#include "turf\void.dm"
+#include "ui\castbar.dm"
+#include "world\pixelmovement.dm"
+#include "world\world.dm"
+// END_INCLUDE
+

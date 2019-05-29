@@ -1,0 +1,15 @@
+"a" = (/turf/outside/grass,/area)
+"b" = (/mob/npc/monster,/turf/outside/grass,/area)
+
+(1,1,1) = {"
+aaaaaaaaaa
+aaaaaaaaaa
+aaaabaaaaa
+aaaaaaaaaa
+aaaaaaaaaa
+aaaaaaaaaa
+aaaaaaaaaa
+aaaaaaaaaa
+aaaaaaaaaa
+aaaaaaaaaa
+"}

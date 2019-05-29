@@ -1,0 +1,69 @@
+macro "macro"
+	elem 
+		name = "Center+REP"
+		command = ".center"
+	elem 
+		name = "Northeast+REP"
+		command = ".northeast"
+	elem 
+		name = "Southeast+REP"
+		command = ".southeast"
+	elem 
+		name = "Southwest+REP"
+		command = ".southwest"
+	elem 
+		name = "Northwest+REP"
+		command = ".northwest"
+	elem 
+		name = "West+REP"
+		command = ".west"
+	elem 
+		name = "North+REP"
+		command = ".north"
+	elem 
+		name = "East+REP"
+		command = ".east"
+	elem 
+		name = "South+REP"
+		command = ".south"
+	elem 
+		name = "1"
+		command = "Punch"
+
+
+menu "menu"
+	elem 
+		name = "&Quit"
+		command = ".quit"
+		category = "&File"
+		saved-params = "is-checked"
+
+
+window "default"
+	elem "default"
+		type = MAIN
+		pos = 372,0
+		size = 1132x700
+		anchor1 = none
+		anchor2 = none
+		is-default = true
+		saved-params = "pos;size;is-minimized;is-maximized"
+		macro = "macro"
+		menu = "menu"
+	elem "map"
+		type = MAP
+		pos = 0,0
+		size = 1128x696
+		anchor1 = 0,0
+		anchor2 = 60,99
+		is-default = true
+		saved-params = "zoom;letterbox;zoom-mode"
+	elem "output"
+		type = OUTPUT
+		pos = 704,568
+		size = 424x128
+		anchor1 = 62,81
+		anchor2 = 100,99
+		is-default = true
+		saved-params = "max-lines"
+
