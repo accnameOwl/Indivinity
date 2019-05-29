@@ -7,3 +7,5 @@ proc
 		return istype(t, /monster)
 	isscreeneffect( t )
 		return istype(t, /ScreenEffect)
+	isitem( t )
+		return istype(t, /Item)
