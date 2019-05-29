@@ -43,9 +43,10 @@ window "default"
 	elem "default"
 		type = MAIN
 		pos = 372,0
-		size = 1132x700
+		size = 1280x720
 		anchor1 = none
 		anchor2 = none
+		background-color = none
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		macro = "macro"
@@ -53,15 +54,24 @@ window "default"
 	elem "map"
 		type = MAP
 		pos = 0,0
-		size = 1128x696
+		size = 1280x720
 		anchor1 = 0,0
 		anchor2 = 60,99
 		is-default = true
 		saved-params = "zoom;letterbox;zoom-mode"
+	elem "tab1"
+		type = TAB
+		pos = 0,600
+		size = 296x96
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		is-default = true
+		saved-params = ""
 	elem "output"
 		type = OUTPUT
-		pos = 704,568
-		size = 424x128
+		pos = 796,585
+		size = 480x131
 		anchor1 = 62,81
 		anchor2 = 100,99
 		is-default = true

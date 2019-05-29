@@ -6,7 +6,7 @@ world
 	fps = 40		// 25 frames per second
 	icon_size = 32	// 32x32 icon size by default
 
-	view = "25x15"		// show up to 6 tiles outward from center (13x13 view)
+	view = "41x23"		// show up to 6 tiles outward from center (13x13 view)
 
 
 // Make objects move 8 pixels per tick when walking

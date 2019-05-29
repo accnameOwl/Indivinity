@@ -19,6 +19,7 @@
 // BEGIN_INCLUDE
 #include "#define.dm"
 #include "types.dm"
+#include "dmf.dmf"
 #include "map.dmm"
 #include "combat\combat_flags.dm"
 #include "combat\cooldown.dm"

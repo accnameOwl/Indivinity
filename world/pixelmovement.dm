@@ -1,2 +1,2 @@
 mob
-	step_size = 2
+	step_size = 1
