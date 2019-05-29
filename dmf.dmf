@@ -59,15 +59,15 @@ window "default"
 		anchor2 = 60,99
 		is-default = true
 		saved-params = "zoom;letterbox;zoom-mode"
-	elem "tab1"
-		type = TAB
-		pos = 0,600
-		size = 296x96
+	elem "info1"
+		type = INFO
+		pos = 0,576
+		size = 336x144
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		is-default = true
 		saved-params = ""
+		tab-background-color = none
 	elem "output"
 		type = OUTPUT
 		pos = 796,585

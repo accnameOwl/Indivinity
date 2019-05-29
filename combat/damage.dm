@@ -4,7 +4,7 @@ mob/proc
 	DealDamage( mob/target, damage)
 		if( isplayer(target) || isnpc(target) )
 			//if target is dead, end
-			if( target.dead() )
+			if( target.dead() || target.invinsible())
 				return
 			//if you are not in combat, call EnteredCombat()
 			if( in_combat() == OUT_OF_COMBAT )

@@ -19,3 +19,4 @@ obj
 
 world
 	mob = /mob/player
+

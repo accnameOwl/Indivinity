@@ -8,6 +8,7 @@ mob/var/list/combat_flags = list(\
 	"in_combat" = FALSE,
 	"combat_timestamp" = 0,
 	"health_regeneration_trigger" = FALSE,
+	"invinsible" = FALSE,
 	)
 
 mob/proc
@@ -46,6 +47,10 @@ mob/proc
 		if(flag == null)
 			return combat_flags["respawn_time"]
 		combat_flags["respawn_time"] = flag
+	invinsible(flag)
+		if(flag == null)
+			return combat_flags["invinsible"]
+		combat_flags["invinsible"] = flag
 
 mob/Read(savefile/f)
 	combat_timestamp(0)
