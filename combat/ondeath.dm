@@ -1,5 +1,5 @@
 mob/proc
-	OnDeath()
+	OnDeath(mob/from)
 		world << "OnDeath()"
 		//leave combat
 		in_combat(OUT_OF_COMBAT)

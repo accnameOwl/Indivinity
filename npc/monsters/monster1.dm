@@ -29,3 +29,9 @@ monster/monster1
 	last_attack_timestamp = 0
 	//ticks untill next attack
 	attack_speed = 10
+
+
+	OnDeath(mob/player/from)
+		..(from)
+		if(from.quest_list["1"] && !from.quest_list["1"].complete)
+			from.QuestAddCount()

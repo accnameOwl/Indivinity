@@ -17,10 +17,10 @@ mob/proc
 			target.Stats_Sub("health", "value", damage)
 			world << "Damage: [damage]"
 			world << "Health: [target.Stats_Get("health","value")]"
-			target.OnDamage()
+			target.OnDamage(src)
 
 	//called on by taking damage, regardless of source.
-	OnDamage()
+	OnDamage(mob/from)
 		var/current_hp = src.Stats_Get("health", "value")
 
 		//if you are not in combat and getting hit, you enter combat
@@ -31,4 +31,4 @@ mob/proc
 		//this tells the system when to drop combat if not hit from the past 13 seconds
 		combat_timestamp(world.time)
 		if(current_hp <= 0)
-			OnDeath()
+			OnDeath(from)

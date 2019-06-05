@@ -52,4 +52,5 @@ mob/npc/shopkeeper
 
 mob/npc/shopkeeper
 	shopkeeper1
-		sales_list = list("Sword" = /Item/Sword, "Armor" = /Item/Armor)
+		name = "Shopkeeper"
+		sales_list = list("Weights" = /Item/Equipment/Weights)
