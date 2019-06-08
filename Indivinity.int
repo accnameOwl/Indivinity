@@ -7,6 +7,6 @@ AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 512.1468
 WINDOW: npc\monsters\monster1.dm;Indivinity.dme;screen\hud\playerframe.dm;admin\admin.dm;admin\host.dm;admin\owner.dm;admin\tools.dm;player\onlogin.dm;world\world.dm;world\ondel.dm;combat\combat_flags.dm;combat\cooldown.dm;combat\damage.dm;npc\monster_ai.dm
-FILE: combat\cooldown.dm
+FILE: npc\monster_ai.dm
 */
 // END_INTERNALS
