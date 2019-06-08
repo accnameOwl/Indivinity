@@ -1,3 +1,12 @@
+/*
+
+	Source: 	Ter13.Cooldownlib
+	Hub:	http://www.byond.com/developer/Ter13/CooldownLib
+
+	Credit of this file goes to Ter13@BYOND
+
+*/
+
 #define PRESERVE_NONE 0
 #define PRESERVE_WORLDTIME 1
 #define PRESERVE_REALTIME 2

@@ -117,12 +117,15 @@ monster
 
 	HideAreatrigger()
 		areatrigger.Relocate(locate(0,0,0))
-
+#define AREATRIGGER_ICON
 
 //area trigger for monster ai
 Areatrigger
 	parent_type = /obj
+	#ifdef AREATRIGGER_ICON
 	icon = 'areatrigger.dmi'
+	#endif
+
 	var/monster/owner
 
 	//apply scale to the Areatrigger

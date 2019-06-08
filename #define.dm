@@ -27,3 +27,6 @@
 //ghost related
 #define VIEW_GHOST 7 // plane of invisibility to turn players when they turn into ghosts
 #define VIEW_ALIVE 0
+
+//AI trigger
+//#define AREATRIGGER_ICON

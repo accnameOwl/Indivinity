@@ -1,10 +1,30 @@
 Item
 	parent_type = /obj
 
-	Armor
-		name = "armor"
-	Sword
-		name = "sword"
+	Equipment
+		name = "Equipment"
+		/*
+		head = 1
+		armor = 2
+		legs = 3
+		weapon = 4
+		off-hand = 5
+
+		weights = 10
+		*/
+		var/slot = 0
+		verb
+			PickUp()
+				set name = "Pick up"
+				set src in view(1)
+				src.loc = usr
+
+		Weights
+			name = "Weights"
+			slot = 10
+
+
+
 
 
 

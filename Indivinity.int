@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1559139150
-DIR: combat item mob npc npc\monsters player player\combat screen turf ui world 
+LAST_COMPILE_TIME: 1559604430
+DIR: admin combat icons item mob npc npc\monsters player player\combat player\quest quest screen screen\hud screen\images screen\images\UI turf ui world 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 512.1468
-WINDOW: npc\monster_ai.dm;map.dmm;npc\monster.dm;#define.dm;icons\player_base.dmi;icons\monster.dmi;npc\monsters\monster1.dm;npc\monsters\monster2.dm;npc\monsters\monster3.dm;dmf.dmf;world\world.dm;ui\castbar.dm;combat\cooldown.dm;combat\enteredcombat.dm;combat\combat_flags.dm;world\pixelmovement.dm;combat\damage.dm;npc\npc.dm;npc\shopkeeeper.dm;mob\new.dm;types.dm;item\item.dm;screen\effects.dm;player\combat\attack.dm;player\onlogin.dm
-FILE: item\item.dm
+WINDOW: npc\monsters\monster1.dm;Indivinity.dme;screen\hud\playerframe.dm;admin\admin.dm;admin\host.dm;admin\owner.dm;admin\tools.dm;player\onlogin.dm;world\world.dm;world\ondel.dm;combat\combat_flags.dm;combat\cooldown.dm;combat\damage.dm;npc\monster_ai.dm
+FILE: npc\monster_ai.dm
 */
 // END_INTERNALS
