@@ -8,6 +8,7 @@
 // BEGIN_FILE_DIR
 #define FILE_DIR .
 #define FILE_DIR "icons"
+#define FILE_DIR "icons/other"
 #define FILE_DIR "screen"
 #define FILE_DIR "screen/images"
 #define FILE_DIR "screen/images/UI"
@@ -19,6 +20,7 @@
 // END_PREFERENCES
 
 // BEGIN_INCLUDE
+#include <forum_account\reference\reference.dme>
 #include "#define.dm"
 #include "types.dm"
 #include "dmf.dmf"

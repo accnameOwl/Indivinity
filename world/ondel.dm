@@ -4,6 +4,7 @@ world
 		..()
 	New()
 		..()
+		//world.generate_reference()
 		OnNew()
 
 
