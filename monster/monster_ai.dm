@@ -102,7 +102,9 @@ monster
 			dist = get_dist(src, home_loc)
 			dir = get_dir(src, home_loc)
 			sleep(world.tick_lag)
-		. = ShowAreatrigger(src)
+
+		ClearThreat()
+		ShowAreatrigger(src)
 
 	ShowAreatrigger(monster/m)
 		if(!areatrigger)
