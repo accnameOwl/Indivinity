@@ -1,11 +1,57 @@
 "a" = (/turf,/area)
-"b" = (/turf/void,/area)
-"c" = (/mob/npc/shopkeeper/shopkeeper1,/turf/void,/area)
-"d" = (/mob/npc/questtest,/turf/void,/area)
-"e" = (/monster/monster1,/turf/void,/area)
-"f" = (/monster/monster2,/turf/void,/area)
+"b" = (/turf/outside/grass,/area)
+"c" = (/turf/outside/sand,/area)
+"d" = (/turf/outside/grass,/turf/outside/sand/northwest,/area)
+"e" = (/turf/outside/grass,/turf/outside/sand/north,/area)
+"f" = (/turf/outside/grass,/turf/outside/sand/northeast,/area)
+"g" = (/turf/outside/grass,/turf/outside/sand/west,/area)
+"h" = (/turf/outside/grass,/turf/outside/sand/east,/area)
+"i" = (/turf/outside/grass,/turf/outside/sand/south,/area)
+"j" = (/turf/outside/grass,/turf/outside/sand/southeast,/area)
+"k" = (/turf/outside/grass,/turf/outside/sand/southwest,/area)
+"l" = (/turf/outside/grass,/turf/outside/sand/c_northwest,/area)
+"m" = (/turf/outside/grass,/turf/outside/sand/c_northeast,/area)
+"n" = (/turf/outside/grass,/turf/outside/sand/c_southeast,/area)
+"o" = (/turf/outside/grass,/turf/outside/sand/c_southwest,/area)
+"p" = (/map_misc/tree/root,/map_misc/tree/tree1,/turf/outside/grass,/area)
+"q" = (/turf/outside/water/one,/area)
+"r" = (/turf/outside/hills/center,/area)
+"s" = (/turf/outside/grass,/turf/outside/hills/b_west,/area)
+"t" = (/turf/outside/grass,/turf/outside/hills/surface_t_east,/area)
+"u" = (/turf/outside/grass,/turf/teleporter/eleven,/area)
+"v" = (/turf/outside/grass,/turf/teleporter/twelve,/area)
+"w" = (/turf/outside/grass,/turf/teleporter/thirtin,/area)
+"x" = (/map_misc/statue/one,/turf/outside/sand,/area)
+"y" = (/turf/outside/grass,/turf/teleporter/six,/area)
+"z" = (/turf/outside/grass,/turf/teleporter/seven,/area)
+"A" = (/turf/teleporter/eight,/area)
+"B" = (/turf/outside/grass,/turf/teleporter/nine,/area)
+"C" = (/turf/outside/grass,/turf/teleporter/ten,/area)
+"D" = (/turf/outside/grass,/turf/teleporter/one,/area)
+"E" = (/turf/outside/grass,/turf/teleporter/two,/area)
+"F" = (/turf/outside/grass,/turf/teleporter/three,/area)
+"G" = (/turf/outside/grass,/turf/teleporter/four,/area)
+"H" = (/turf/outside/grass,/turf/teleporter/five,/area)
+"I" = (/turf/outside/grass,/turf/outside/hills/b_center,/area)
+"J" = (/turf/outside/grass,/turf/outside/hills/surface_t_west,/area)
+"K" = (/turf/outside/grass,/turf/outside/hills/t_west,/area)
+"L" = (/turf/outside/grass,/turf/outside/hills/t_center,/area)
+"M" = (/turf/outside/hills/surface_center,/area)
+"N" = (/turf/outside/grass,/turf/outside/hills/r_west,/area)
+"O" = (/turf/outside/hills/r_center,/area)
+"P" = (/turf/outside/hills/surface_center,/turf/outside/hills/r_east,/area)
+"Q" = (/turf/outside/grass,/turf/outside/hills/west,/area)
+"R" = (/turf/outside/hills/surface_center,/turf/outside/hills/east,/area)
+"S" = (/turf/outside/hills/surface_center,/turf/outside/hills/b_east,/area)
+"T" = (/turf/outside/grass,/map_misc/statue/three,/turf/outside/sand/north,/area)
+"U" = (/turf/outside/grass,/map_misc/statue/four,/turf/outside/sand/northeast,/area)
+"V" = (/turf/outside/grass,/map_misc/statue/two,/turf/outside/sand/east,/area)
 
 (1,1,1) = {"
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
@@ -31,41 +77,37 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbdeeeeeeefbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbdeelccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbgcccccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+tLLLLLJbbbbbbbbbgccccccccccmefbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+KMMMMMMMbbbbbbdelccccccccccccmefbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+NOOOOOPMbbbbbbgcccccccniiiioccchbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+QrrrrrRMbbbdeelccccccchbbbbgccchbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+QrrrrrRMbbbgcccccccccchbbbbgccchbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+sIIIIISMbbbgccccccniiijbbbbkiiijbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbgcccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbgcccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbkiiiiiijbbbbbbbbbbbdeeeefbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbgcccchbbbbbbbbbbbbbbbbbbbbbbbb
+bbbpbbbdTUbbbbbbbbbbbbbbbbbbbbgcccchbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbgxVbbbbbbbbbbbbbbbbbbbbgcccchbbbbbbbbbbbbbbbbbbbbbbbb
+bbuvwbbkijbbbbbbbbbbbbbbbbbdeelcccchbbbbbbbbbbbbbbbbbbbbbbbb
+byzABCbbbbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbb
+bDEFGHbbbbbbbbbbbbbbbbbbbbbkiiiiiiijbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbebbbbbbbbbfbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbdbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 "}
 
 (1,1,2) = {"

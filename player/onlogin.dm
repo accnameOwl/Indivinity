@@ -15,9 +15,12 @@ mob/player
 		weights.loc = src
 		EquipItem(weights)
 */
+
+
 		var cpu_text/o = new
 		client.screen += o
 		spawn() o.update()
+
 
 	OnLogout()
 		online_players[src.key] = null

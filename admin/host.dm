@@ -2,7 +2,7 @@ Tools/Host
 
 	verb
 		Reboot()
-			set category = "Tools"
+			set category = "Admin"
 
 			world << "<b><h1><center>World reboot</center></h1></b>"
 			world << "<b><h3><center>30 seconds...</center></h3></b>"
@@ -29,13 +29,13 @@ Tools/Host
 
 
 		OpenPort()
-			set category = "Tools"
+			set category = "Admin"
 			var/a = alert("Warning: if you are not familiar with hosting, advert from using this command!", ,"Ok","Cancel")
 			if(a == "Ok")
 				var/p = input("Which port would you like to open:") as num
 				world.OpenPort(p)
 
 		Repop()
-			set category = "Tools"
+			set category = "Admin"
 			world.log << "src = [src] : world.Repop()"
 			world.Repop()
