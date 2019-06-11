@@ -1,4 +1,4 @@
-monster
+Monster
 
 	//ai
 	var
@@ -18,7 +18,7 @@ monster
 		sleeping = 1
 
 		//areatrigger is the aggro_box around monsters, that detect players.
-		Areatrigger/areatrigger
+		obj/Areatrigger/areatrigger
 
 		//home_loc is the location to where monsters spawn, and return if failing chasing a player
 		home_loc
@@ -106,9 +106,9 @@ monster
 		ClearThreat()
 		ShowAreatrigger(src)
 
-	ShowAreatrigger(monster/m)
+	ShowAreatrigger(Monster/m)
 		if(!areatrigger)
-			areatrigger = new/Areatrigger(m)
+			areatrigger = new/obj/Areatrigger(m)
 
 			//scale the areatrigger, relative to the monsters aggro_dist
 			areatrigger.Scale(aggro_dist,aggro_dist)
@@ -122,13 +122,13 @@ monster
 #define AREATRIGGER_ICON
 
 //area trigger for monster ai
-Areatrigger
+obj/Areatrigger
 	parent_type = /obj
 	#ifdef AREATRIGGER_ICON
 	icon = 'areatrigger.dmi'
 	#endif
 
-	var/monster/owner
+	var/Monster/owner
 
 	//apply scale to the Areatrigger
 	proc/Scale(_x,_y)
@@ -148,10 +148,10 @@ Areatrigger
 		step_x = (bound_width / 2) * -1
 		step_y = (bound_height / 2) * -1
 
-	New(monster/_owner)
+	New(Monster/_owner)
 		owner=_owner
 
-	Crossed(mob/player/a)
+	Crossed(mob/a)
 		if(isplayer(a) && !owner.dead())
 			spawn() owner.FoundTarget(a)
 

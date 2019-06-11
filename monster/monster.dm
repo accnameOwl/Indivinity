@@ -1,5 +1,5 @@
 
-monster
+Monster
 
 	parent_type = /mob/npc
 

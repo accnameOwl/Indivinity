@@ -1,5 +1,5 @@
 
-monster
+Monster
 	var
 		//calculate damage over said duration,
 		//then update target to highest damage output.

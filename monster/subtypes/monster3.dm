@@ -1,4 +1,4 @@
-monster/monster3
+Monster/monster3
 	name = "Black basic"
 
 	icon_state = "monster3"

@@ -1,34 +1,10 @@
 macro "macro"
 	elem 
-		name = "Center+REP"
-		command = ".center"
+		name = "Any"
+		command = "keydown \"[[*]]\""
 	elem 
-		name = "Northeast+REP"
-		command = ".northeast"
-	elem 
-		name = "Southeast+REP"
-		command = ".southeast"
-	elem 
-		name = "Southwest+REP"
-		command = ".southwest"
-	elem 
-		name = "Northwest+REP"
-		command = ".northwest"
-	elem 
-		name = "West+REP"
-		command = ".west"
-	elem 
-		name = "North+REP"
-		command = ".north"
-	elem 
-		name = "East+REP"
-		command = ".east"
-	elem 
-		name = "South+REP"
-		command = ".south"
-	elem 
-		name = "1"
-		command = "Punch"
+		name = "Any+UP"
+		command = "keyup \"[[*]]\""
 
 
 menu "menu"
@@ -46,7 +22,6 @@ window "default"
 		size = 1280x720
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		macro = "macro"
@@ -67,7 +42,6 @@ window "default"
 		anchor2 = none
 		is-default = true
 		saved-params = ""
-		tab-background-color = none
 	elem "output"
 		type = OUTPUT
 		pos = 796,585

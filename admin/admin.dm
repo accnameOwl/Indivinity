@@ -7,7 +7,7 @@ proc
 		else
 			return FALSE
 
-Tools/Admin
+Admin/Admin
 
 	verb
 		Realtime()

@@ -8,8 +8,8 @@ mob/player
 		src.loc = locate(5,5,1)
 
 		if(src.key == "Tafe")
-			src.verbs += typesof(/Tools/Host/verb)
-			src.verbs += typesof(/Tools/Admin/verb)
+			src.verbs += typesof(/Admin/Host/verb)
+			src.verbs += typesof(/Admin/Admin/verb)
 /*
 		var/Item/Equipment/Weights/weights = new
 		weights.loc = src

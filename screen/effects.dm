@@ -3,8 +3,6 @@
 //resaulting in: screen_effects[/ScreenEffect/Ghost]
 var/list/screen_effects = new
 
-client/proc
-	ShowScreenEffect(effect_type)
 
 client/proc
 	AddScreenEffect(effect_type)
