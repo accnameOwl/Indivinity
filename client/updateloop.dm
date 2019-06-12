@@ -19,7 +19,7 @@ client
 				if((move_dir&3)==3) move_dir -= 3
 				if((move_dir&12)==12) move_dir -= 12
 				if(move_dir)
-					step(src.mob, move_dir, 4)
+					step(src.mob, move_dir, mob.step_size)
 				sleep(10/world.fps)
 
 

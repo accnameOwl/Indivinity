@@ -293,6 +293,8 @@ client
 			keybinds["DpadR"] = new/keybind("DpadR",list("D","ArrowR"),4)
 			keybinds["DpadL"] = new/keybind("DpadL",list("A","ArrowL"),8)
 
+			keybinds["1"] = new/keybind("1","1")
+
 			bound_keys = list()
 			var/id, keybind/k, key
 			for(id in keybinds)

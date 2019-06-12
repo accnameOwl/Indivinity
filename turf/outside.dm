@@ -71,6 +71,9 @@ turf/outside
 			layer = 7
 
 	water
+		Cross(atom/movable/a)
+			if(a.walk_on_water)
+				a.Bump()
 		one
 			icon_state="49"
 		two

@@ -3,7 +3,7 @@
  */
 
 world
-	fps = 40		// 25 frames per second
+	fps = 20		// 25 frames per second
 	icon_size = 48	// 32x32 icon size by default
 
 	view = "27x16"		// show up to 6 tiles outward from center (13x13 view)
