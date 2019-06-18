@@ -10,7 +10,7 @@ Monster
 		cast_reach_dist = 5
 
 		//chase speed ( sleeptime would be world.tick_lag * chase_speed )
-		chase_speed = 2
+		chase_speed = 10
 
 		mob/player/target
 
@@ -38,6 +38,7 @@ Monster
 		if(!target)
 			target = m
 			sleeping = 0
+			LOG("/Monster : FoundTarget() \n src: [src] \n target: [target]")
 			HideAreatrigger()
 			ChaseState()
 
@@ -45,6 +46,7 @@ Monster
 		set waitfor = 0
 		//conditions
 		if( !target.dead() || !dead())
+			LOG("/Monster : ChaseState() \n src: [src]")
 
 			var
 				dist = get_dist( src, target )
@@ -73,9 +75,10 @@ Monster
 
 				//if there is an overwritten CastingState()
 				//do CastingState()
+				/*
 				if(dist <= cast_reach_dist)
 					CastingState()
-
+				*/
 				//forward to ResetState()
 				if(dist <= attack_reach_dist)
 					AttackState()
@@ -86,6 +89,7 @@ Monster
 
 	AttackState()
 		if( world.time - last_attack_timestamp >= attack_speed )
+			LOG("/Monster : AttackState() \n src: [src]")
 			if( target.dead() )
 				return ResetState()
 			last_attack_timestamp = world.time
@@ -96,13 +100,15 @@ Monster
 		sleeping = 1
 		var/dist = get_dist(src, home_loc)
 		var/dir = get_dir(src, home_loc)
-		while(dist > 0)
-			. = step(src, dir)
+		LOG("/Monster : ResetState() \n src: [src]")
+		while(dist > 4)
+			. = step(src, dir, step_size)
 			if(!.)
 				step_rand(src)
 			dist = get_dist(src, home_loc)
 			dir = get_dir(src, home_loc)
-			sleep(world.tick_lag)
+			sleep(10/world.fps)
+		home_loc = src.loc
 
 		ClearThreat()
 		ShowAreatrigger(src)
