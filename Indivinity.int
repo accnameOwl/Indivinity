@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1560330637
-DIR: client event icons\other mob monster monster\subtypes player player\attacks player\quest screen screen\hud screen\images\UI turf world Lib 
+LAST_COMPILE_TIME: 1560821562
+DIR: client combat monster player screen screen\hud screen\images screen\images\UI turf 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
-LAST_COMPILE_VERSION: 512.1470
-WINDOW: turf\outside.dm;map.dmm;client\updateloop.dm;client\keybinds.dm;world\world.dm;client\client.dm;mob\del.dm;mob\_mob.dm;client\keybinds_combat.dm;player\attacks\punch.dm;monster\monster_ai.dm
-FILE: client\keybinds_combat.dm
+LAST_COMPILE_VERSION: 512.1471
+WINDOW: turf\outside.dm;map.dmm;screen\hud\ui_frames.dm;player\onlogin.dm;client\updateloop.dm;screen\hud\hud.dm
+FILE: screen\hud\hud.dm
 */
 // END_INTERNALS

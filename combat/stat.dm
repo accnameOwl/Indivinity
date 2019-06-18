@@ -30,7 +30,8 @@ Stat/proc
 		. = level
 		while( experience >= limit_experience )
 			limit += round( (level / 2) * value_multiplier)
-			value = limit
+			if(name != "health" || name != "regen")
+				value = limit
 			++level
 			experience -= limit_experience
 			limit_experience = round( limit_experience* experience_multiplier)

@@ -42,6 +42,7 @@ Monster
 			ChaseState()
 
 	ChaseState()
+		set waitfor = 0
 		//conditions
 		if( !target.dead() || !dead())
 
@@ -79,7 +80,7 @@ Monster
 				if(dist <= attack_reach_dist)
 					AttackState()
 
-				sleep(world.tick_lag * chase_speed)
+				sleep((10/world.fps) * chase_speed)
 
 			ResetState()
 
@@ -130,30 +131,53 @@ obj/Areatrigger
 
 	var/Monster/owner
 
-	//apply scale to the Areatrigger
-	proc/Scale(_x,_y)
-		transform = new/matrix().Scale(_x,_y)
 
-	proc/Relocate(loc)
-		src.loc = loc
+	proc
+		Relocate(location)
+			src.loc = location
+		//The object needs to portray correct bounds in pixel movement.
+		//And also to scale, relative to parent_monster's aggro_dist
 
-	//offsets image, bounds and step
-	proc/ChangeBounds(x_offset = 0, y_offset = 0, extra_width = 0, extra_height = 0)
-		pixel_x -= x_offset
-		pixel_y -= y_offset
+		/* ChangeBounds(x_offset, y_offset, extra_width, extra_height)
+		*
+		*	arguments:
+		*		x_offset = pixels to shift image on the x-axis. Automaticly negative
+		*		y_offset = pixels to shift image on the y-axis. Automaticly negative
+		*		extra_width = how many tiles to enlarge on x-axis
+		*		extra_height = how many tiles to enlarge on y-axis
+		*
+		*/
+		ChangeBounds(x_offset = 0, y_offset = 0, extra_width = 0, extra_height = 0)
 
-		bound_width += extra_width * world.icon_size
-		bound_height += extra_height * world.icon_size
+			//offset image in pixels.
+			pixel_x -= x_offset
+			pixel_y -= y_offset
 
-		step_x = (bound_width / 2) * -1
-		step_y = (bound_height / 2) * -1
+			//increase bound size
+			bound_width += extra_width * world.icon_size
+			bound_height += extra_height * world.icon_size
+
+			//offstep the object on the map, relative to it's size.
+			step_x = ((bound_width / 2) * -1) + world.icon_size/2
+			step_y = ((bound_height / 2) * -1) + world.icon_size/2
+
+		/*	Scale()
+		*
+		*	argument:
+		*		_x = times to scale in x-coordinate
+		*		_y = times to scale in y-coordinate
+		*
+		*/
+		Scale(_x,_y)
+			transform = new/matrix().Scale(_x+1,_y+1)
+
 
 	New(Monster/_owner)
 		owner=_owner
 
 	Crossed(mob/a)
 		if(isplayer(a) && !owner.dead())
-			spawn() owner.FoundTarget(a)
+			owner.FoundTarget(a)
 
 	Del()
 		world.log << "[src]:/Areatrigger.Del()"

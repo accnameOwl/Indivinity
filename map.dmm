@@ -43,9 +43,11 @@
 "Q" = (/turf/outside/grass,/turf/outside/hills/west,/area)
 "R" = (/turf/outside/hills/surface_center,/turf/outside/hills/east,/area)
 "S" = (/turf/outside/hills/surface_center,/turf/outside/hills/b_east,/area)
-"T" = (/turf/outside/grass,/map_misc/statue/three,/turf/outside/sand/north,/area)
-"U" = (/turf/outside/grass,/map_misc/statue/four,/turf/outside/sand/northeast,/area)
-"V" = (/turf/outside/grass,/map_misc/statue/two,/turf/outside/sand/east,/area)
+"T" = (/Monster/monster1,/turf/outside/sand,/area)
+"U" = (/turf/outside/grass,/Monster/monster1,/turf/outside/sand/south,/area)
+"V" = (/turf/outside/grass,/map_misc/statue/three,/turf/outside/sand/north,/area)
+"W" = (/turf/outside/grass,/map_misc/statue/four,/turf/outside/sand/northeast,/area)
+"X" = (/turf/outside/grass,/map_misc/statue/two,/turf/outside/sand/east,/area)
 
 (1,1,1) = {"
 qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
@@ -95,14 +97,14 @@ tLLLLLJbbbbbbbbbgccccccccccmefbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 KMMMMMMMbbbbbbdelccccccccccccmefbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 NOOOOOPMbbbbbbgcccccccniiiioccchbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 QrrrrrRMbbbdeelccccccchbbbbgccchbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-QrrrrrRMbbbgcccccccccchbbbbgccchbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-sIIIIISMbbbgccccccniiijbbbbkiiijbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+QrrrrrRMbbbgcccTTcTccchbbbbgccchbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+sIIIIISMbbbgccccccnUUijbbbbkiiijbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbgcccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbgcccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbkiiiiiijbbbbbbbbbbbdeeeefbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbgcccchbbbbbbbbbbbbbbbbbbbbbbbb
-bbbpbbbdTUbbbbbbbbbbbbbbbbbbbbgcccchbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbgxVbbbbbbbbbbbbbbbbbbbbgcccchbbbbbbbbbbbbbbbbbbbbbbbb
+bbbpbbbdVWbbbbbbbbbbbbbbbbbbbbgcccchbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbgxXbbbbbbbbbbbbbbbbbbbbgcccchbbbbbbbbbbbbbbbbbbbbbbbb
 bbuvwbbkijbbbbbbbbbbbbbbbbbdeelcccchbbbbbbbbbbbbbbbbbbbbbbbb
 byzABCbbbbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbb
 bDEFGHbbbbbbbbbbbbbbbbbbbbbkiiiiiiijbbbbbbbbbbbbbbbbbbbbbbbb

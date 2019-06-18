@@ -7,7 +7,7 @@ mob/proc
 			if(flag)
 				world.log << "[src] turned to a ghost"
 
-				if( isplayer(src) )
+				if( src.client )
 					//add ghost effect on screen
 					client.AddScreenEffect(/ScreenEffect/Ghost)
 

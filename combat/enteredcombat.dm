@@ -17,4 +17,4 @@ mob/proc
 			var/passed_time = combat_timestamp() - world.time
 			if(passed_time <= DROP_COMBAT_TIMER)
 				ExitedCombat()
-			sleep(world.tick_lag * 2)
+			sleep(50/world.fps)

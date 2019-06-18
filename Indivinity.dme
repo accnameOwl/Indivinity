@@ -18,9 +18,11 @@
 // BEGIN_PREFERENCES
 #define DEBUG
 // END_PREFERENCES
-
+#define TileHeight 46
+#define TileWidth 46
 // BEGIN_INCLUDE
 #include <forum_account\reference\reference.dme>
+#include <kaiochao\vector2\Vector2.dme>
 #include "#define.dm"
 #include "types.dm"
 #include "dmf.dmf"
@@ -28,6 +30,7 @@
 #include "admin\admin.dm"
 #include "admin\host.dm"
 #include "admin\tools.dm"
+#include "atom\atom.dm"
 #include "client\client.dm"
 #include "client\keybinds.dm"
 #include "client\keybinds_combat.dm"
@@ -45,6 +48,7 @@
 #include "inventory\inventory.dm"
 #include "item\item.dm"
 #include "mob\_mob.dm"
+#include "mob\castbar.dm"
 #include "mob\del.dm"
 #include "mob\login.dm"
 #include "mob\logout.dm"
@@ -71,7 +75,7 @@
 #include "screen\effects.dm"
 #include "screen\println.dm"
 #include "screen\hud\hud.dm"
-#include "screen\hud\playerframe.dm"
+#include "screen\hud\ui_frames.dm"
 #include "turf\outside.dm"
 #include "turf\void.dm"
 #include "ui\castbar.dm"

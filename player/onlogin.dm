@@ -5,7 +5,7 @@ mob/player
 		online_players[src.key] = src
 		if(!CheckBan(src.key))
 			src << "You are in the banlist"
-		src.loc = locate(5,5,1)
+		src.loc = locate(10,5,1)
 
 		if(src.key == "Tafe")
 			src.verbs += typesof(/Admin/Host/verb)
@@ -15,7 +15,8 @@ mob/player
 		weights.loc = src
 		EquipItem(weights)
 */
-
+		client.UI_ShowHealthFrame()
+		client.UI_ShowManaFrame()
 
 		var cpu_text/o = new
 		client.screen += o
@@ -37,4 +38,4 @@ cpu_text
 				maptext = "cpu: <font color=#FF5555>[world.cpu]%</font>"
 			else
 				maptext = "cpu: [world.cpu]%"
-			sleep(world.tick_lag)
+			sleep(10/world.fps)

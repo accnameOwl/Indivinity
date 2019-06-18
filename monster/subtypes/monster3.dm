@@ -11,7 +11,7 @@ Monster/monster3
 	cast_reach_dist = 5
 
 	//chase speed ( sleeptime would be world.tick_lag * chase_speed )
-	chase_speed = 2
+	chase_speed = 1.8
 
 	mob/player/target
 

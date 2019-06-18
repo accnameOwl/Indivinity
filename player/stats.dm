@@ -6,9 +6,9 @@ mob/var
 
 mob/player/New()
 	combat_stats = list(\
-		"health" = new/Stat("health", 10000000000, 1, 100, 1.1, 1.2),
+		"health" = new/Stat("health", 100, 1, 100, 1.1, 1.2),
 		"mana" = new/Stat("mana", 2, 1, 100),
-		"regen" = new/Stat("regen", 4, 1, 100, 1.1, 1.02),
+		"regen" = new/Stat("regen", 4, 1, 100, 1.03, 1.1),
 		"manaregen" = new/Stat("manaregen", 1, 1, 100),
 
 		"strength" = new/Stat("strength", 10, 1, 100),

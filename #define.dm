@@ -1,4 +1,12 @@
 #define DEBUG
+
+#ifdef LOG
+	#define LOG(x) world.log << x
+#else
+	#define LOG(x)
+#endif
+
+
 //define default constructor values for /Stat
 //used in Stat.New() - File "/combat/Stat.dm"
 #define STAT_DEFAULT_VALUE 1
@@ -22,7 +30,7 @@
 #define ENTERED_COMBAT 1
 //npc ai function, for losing aggro of target
 #define EXITED_COMBAT 2
-#define DROP_COMBAT_TIMER -10 //13 seconds after last hit.
+#define DROP_COMBAT_TIMER -50 //13 seconds after last hit.
 
 //ghost related
 #define VIEW_GHOST 7 // plane of invisibility to turn players when they turn into ghosts
@@ -30,3 +38,9 @@
 
 //AI trigger
 //#define AREATRIGGER_ICON
+
+
+
+//UI
+#define UI_LAYER 45
+#define SCREENEFFECT_LAYER 35

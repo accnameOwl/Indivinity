@@ -88,6 +88,7 @@ turf/outside
 		icon_state = "72"
 
 	hills
+		density = 1
 		icon = 'MapTurfs2.dmi'
 		icon_state = "13"
 		b_west
@@ -118,12 +119,16 @@ turf/outside
 		r_east
 			icon_state = "17"
 		surface_center
+			density = 0
 			icon_state = "39"
 		surface_t_west
+			density = 0
 			icon_state = "19"
 		surface_t_east
+			density = 0
 			icon_state = "18"
 		surface_t_center
+			density = 0
 			icon_state = "22"
 
 turf/teleporter

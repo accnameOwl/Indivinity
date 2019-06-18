@@ -7,7 +7,7 @@ var/list/screen_effects = new
 client/proc
 	AddScreenEffect(effect_type)
 		//add new effect_type to global list if non-existing.
-		if(!global.screen_effects[effect_type] && istype(effect_type,/ScreenEffect))
+		if(!global.screen_effects[effect_type])
 			global.screen_effects[effect_type] = new effect_type
 
 		//render it on screen
@@ -22,8 +22,9 @@ client/proc
 ScreenEffect
 
 	parent_type = /obj
+	layer = SCREENEFFECT_LAYER
 
-	icon = 'Effects.dmi'
+	icon = 'effects.dmi'
 
 	Ghost
 		icon_state="ghost"

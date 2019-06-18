@@ -1,12 +1,13 @@
-#define SLEEPTIME_CAP world.time+1
+#define SLEEPTIME_CAP world.time+5
 
 mob/proc
 	HealthRegeneration()
+		set waitfor = 0
 		if( in_combat() == OUT_OF_COMBAT && !dead() && !health_regeneration_trigger())
 			health_regeneration_trigger(TRUE)
 
 			var
-				subtract_time = round(Stats_Get("regen","level"))
+				subtract_time = round(Stats_Get("regen","level")/2)
 				sleeptime = world.time
 				i = TRUE
 			while( i && !in_combat())
@@ -23,7 +24,6 @@ mob/proc
 
 					//grant experience to regeneration
 					src.Stats_AddExperience("regen", REGEN_EXPERIENCE_GAIN)
-					src.Stats_AddExperience("health", HEALTH_EXPERIENCE_GAIN)
 
 					//update sleeptime
 					sleeptime = world.time + 15 - subtract_time
