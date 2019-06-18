@@ -13,10 +13,12 @@ mob/proc
 			//set timestamp since last time you did damage
 			combat_timestamp(world.time)
 
+			if(ismonster(target))
+				var/Monster/monster = target
+				monster.UpdateThreat(src,damage)
+
 			//continue by following up the damage
 			target.Stats_Sub("health", "value", damage)
-			world << "Damage: [damage]"
-			world << "Health: [target.Stats_Get("health","value")]"
 			target.OnDamage(src)
 
 	//called on by taking damage, regardless of source.

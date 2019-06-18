@@ -1,11 +1,8 @@
-mob/var
-	see_ghosts = FALSE
 
 mob/proc
 	TurnGhost(flag)
 		if( isplayer(src) || ismonster(src) )
 			if(flag)
-				world.log << "[src] turned to a ghost"
 
 				if( src.client )
 					//add ghost effect on screen
@@ -19,9 +16,8 @@ mob/proc
 				invisibility = VIEW_GHOST
 
 			else
-				world.log << "[src] came alive!"
 
-				if( isplayer(src) )
+				if( src.client )
 					//remove ghost effect from screen
 					client.RemoveScreenEffect(/ScreenEffect/Ghost)
 

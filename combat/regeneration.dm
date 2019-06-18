@@ -20,7 +20,7 @@ mob/proc
 					src.Stats_Add("health","value", amount)
 
 					//output amount
-					world << "regen amount: [amount]"
+					LOG("regen amount: [amount]")
 
 					//grant experience to regeneration
 					src.Stats_AddExperience("regen", REGEN_EXPERIENCE_GAIN)
@@ -30,8 +30,7 @@ mob/proc
 
 				//end regen if health is maxed
 				if( Stats_Get("health", "value") >= Stats_Get("health", "limit") )
-					world << "regen: Health maxed?"
 					Stats_Set("health", "value", Stats_Get("health", "limit"))
 					health_regeneration_trigger(FALSE)
-					i = FALSE
-				sleep(2)
+				i = FALSE
+				sleep(30/world.fps)

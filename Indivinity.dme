@@ -75,7 +75,7 @@
 #include "screen\effects.dm"
 #include "screen\println.dm"
 #include "screen\hud\hud.dm"
-#include "screen\hud\ui_frames.dm"
+#include "screen\hud\ui_bars.dm"
 #include "turf\outside.dm"
 #include "turf\void.dm"
 #include "ui\castbar.dm"

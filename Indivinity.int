@@ -1,12 +1,11 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1560821562
-DIR: client combat monster player screen screen\hud screen\images screen\images\UI turf 
+LAST_COMPILE_TIME: 1560827103
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 512.1471
-WINDOW: turf\outside.dm;map.dmm;screen\hud\ui_frames.dm;player\onlogin.dm;client\updateloop.dm;screen\hud\hud.dm
-FILE: screen\hud\hud.dm
+WINDOW: turf\outside.dm;map.dmm;screen\hud\ui_bars.dm;screen\images\UI\health_frame.dmi;screen\hud\hud.dm;client\updateloop.dm;player\onlogin.dm;monster\monster_ai.dm;screen\images\UI\mana_frame.dmi;combat\enteredcombat.dm;combat\exitedcombat.dm;combat\combat_flags.dm;combat\ondeath.dm;combat\onrespawn.dm;combat\regeneration.dm;combat\turnghost.dm;#define.dm;combat\stat.dm;combat\damage.dm;combat\cooldown.dm;monster\monster_threat.dm;monster\monster.dm;player\attacks\punch.dm;types.dm;monster\subtypes\monster1.dm
+FILE: combat\regeneration.dm
 */
 // END_INTERNALS

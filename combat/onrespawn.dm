@@ -1,7 +1,6 @@
 
 mob/proc
 	OnRespawn()
-		world << "OnRespawn()"
 		TurnGhost(FALSE)
 		dead(FALSE)
 		density = 1

@@ -1,6 +1,5 @@
 mob/proc
 	OnDeath(mob/from)
-		world << "OnDeath()"
 		//leave combat
 		in_combat(OUT_OF_COMBAT)
 		health_regeneration_trigger(FALSE)
