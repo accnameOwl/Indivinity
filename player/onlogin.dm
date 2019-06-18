@@ -15,8 +15,7 @@ mob/player
 		weights.loc = src
 		EquipItem(weights)
 */
-		client.UI_ShowHealthFrame()
-		client.UI_ShowManaFrame()
+		client.UI_Show()
 
 		var cpu_text/o = new
 		client.screen += o

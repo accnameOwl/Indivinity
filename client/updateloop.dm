@@ -13,13 +13,17 @@ client
 	proc
 		UIUpdate()
 			set waitfor = 0
+			var/_old = mob.Stats_Get("health","value") / mob.Stats_Get("health","limit")
 			while(src)
 				//dir : screen/hud/ui_frames.dm
 
 				//update health frame
-				hf_fg.Update(mob.Stats_Get("health","value") / mob.Stats_Get("health","limit")*100)
+				var/_new = mob.Stats_Get("health","value") / mob.Stats_Get("health","limit")
+				if(_new != _old)
+					health_frame.setValue(_new)
+					_old = _new
 				//update mana frame
-				mf_fg.Update(mob.Stats_Get("mana","value") / mob.Stats_Get("mana","limit")*100)
+			//	mf_fg.Update(mob.Stats_Get("mana","value") / mob.Stats_Get("mana","limit")*100)
 				sleep(20/world.fps)
 
 		KeyboardUpdate()
