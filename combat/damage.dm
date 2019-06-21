@@ -20,6 +20,7 @@ mob/proc
 			//continue by following up the damage
 			target.Stats_Sub("health", "value", damage)
 			target.OnDamage(src)
+			src.Stats_AddExperience("strength", 200)
 
 	//called on by taking damage, regardless of source.
 	OnDamage(mob/from)
@@ -27,7 +28,7 @@ mob/proc
 
 		//if you are not in combat and getting hit, you enter combat
 		if( in_combat() == OUT_OF_COMBAT )
-			spawn() EnteredCombat()
+			spawn EnteredCombat()
 
 		//create a timestamp from when you got hit.
 		//this tells the system when to drop combat if not hit from the past 13 seconds

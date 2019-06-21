@@ -1,5 +1,10 @@
 Monster
 
+	OnDamage(mob/from)
+		..()
+		if(!target)
+			FoundTarget(from)
+
 	//ai
 	var
 		//distance related variables
@@ -11,8 +16,6 @@ Monster
 
 		//chase speed ( sleeptime would be world.tick_lag * chase_speed )
 		chase_speed = 10
-
-		mob/player/target
 
 		//sleeping equals no target, no chasing. rest state
 		sleeping = 1

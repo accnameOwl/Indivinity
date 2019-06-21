@@ -90,6 +90,7 @@ client
 	var
 		Hud/UI/Maskbar/Healthframe/health_frame = new
 		Hud/UI/Maskbar/Manaframe/mana_frame = new
+		Hud/UI/Maskbar/Staminaframe/stamina_frame = new	//Not added
 
 	proc
 		UI_Show()
@@ -97,14 +98,17 @@ client
 
 Hud/UI/Maskbar/Healthframe
 	icon = 'health_frame.dmi'
-	screen_loc = "WEST:15,NORTH:20"
+	screen_loc = "WEST:15,NORTH:22"
 	width = 300
 	height = 20
 	orientation = EAST
 
 Hud/UI/Maskbar/Manaframe
 	icon = 'mana_frame.dmi'
-	screen_loc = "WEST:15,NORTH:-3"
+	screen_loc = "WEST:15,NORTH"
 	width = 300
 	height = 20
 	orientation = EAST
+Hud/UI/Maskbar/Staminaframe
+	icon = 'stamina_frame.dmi'
+	screen_loc = "WEST:15,NORTH:-22"

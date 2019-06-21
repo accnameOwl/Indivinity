@@ -11,6 +11,9 @@ mob/proc
 				sleeptime = world.time
 				i = TRUE
 			while( i && !in_combat())
+				if(Stats_Get("health","value") >= Stats_Get("health","limit"))
+					i = FALSE
+
 				if( world.time >= sleeptime )
 					//cap how often regen procs
 					if(sleeptime < REGEN_SLEEPTIME_CAP)
@@ -28,9 +31,7 @@ mob/proc
 					//update sleeptime
 					sleeptime = world.time + 15 - subtract_time
 
-				//end regen if health is maxed
-				if( Stats_Get("health", "value") >= Stats_Get("health", "limit") )
-					Stats_Set("health", "value", Stats_Get("health", "limit"))
-					health_regeneration_trigger(FALSE)
-				i = FALSE
 				sleep(30/world.fps)
+
+			Stats_Set("health", "value", Stats_Get("health", "limit"))
+			health_regeneration_trigger(FALSE)

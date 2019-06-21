@@ -25,7 +25,7 @@ Monster
 	New()
 		..()
 		combat_stats = list(\
-			"health" = new/Stat("health", 100, 1, 100, 1.1, 1.2),
+			"health" = new/Stat("health", 100000, 1, 100, 1.1, 1.2),
 			"mana" = new/Stat("mana", 2, 1, 100),
 			"regen" = new/Stat("regen", 4, 1, 100, 1.1, 1.02),
 			"manaregen" = new/Stat("manaregen", 1, 1, 100),

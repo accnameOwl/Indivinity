@@ -19,6 +19,8 @@ Monster
 		UpdateThreat(mob/m, damage)
 			if(!threat_damage[m])
 				threat_damage[m] = list()
+			if(!target)
+				FoundTarget(m)
 
 			threat_damage[m] += list(list("damage" = damage, "time" = world.time))
 			threat_total_damage[m] += damage
@@ -28,6 +30,7 @@ Monster
 				//delete out-timed damages, and remove them from total damage
 				if(threat_damage[m][i]["time"] <= world.time - threat_duration)
 					threat_total_damage[m] -= threat_damage[m][i]["damage"]
+					threat_damage[m].Cut(2,i)
 				else
 					break
 			if(i > 1)
@@ -36,7 +39,7 @@ Monster
 				src.target = m
 				threat_highest_damage = threat_total_damage[m]
 
-			world << "threatlevel: [threat_highest_damage]\nTarget: [target]"
+			LOG("[src] : /Monster - UpdateThread() : [src] = [threat_highest_damage]")
 
 		ClearThreat()
 			threat_damage.Cut()

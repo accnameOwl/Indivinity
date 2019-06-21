@@ -1,4 +1,4 @@
-
+mob/var/mob/target
 //list of personal flags, related to combat.
 mob/var/list/combat_flags = list(\
 	"dead" = FALSE,

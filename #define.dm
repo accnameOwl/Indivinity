@@ -1,6 +1,6 @@
 #define DEBUG
 
-
+#define LOG 1
 
 #ifdef LOG
 	#define LOG(x) world.log << x
