@@ -22,6 +22,7 @@ window "default"
 		size = 1280x720
 		anchor1 = none
 		anchor2 = none
+		background-color = none
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		macro = "macro"
@@ -40,14 +41,17 @@ window "default"
 		size = 336x144
 		anchor1 = none
 		anchor2 = none
+		is-visible = false
 		is-default = true
 		saved-params = ""
+		tab-background-color = none
 	elem "output"
 		type = OUTPUT
-		pos = 796,585
+		pos = 792,589
 		size = 480x131
 		anchor1 = 62,81
 		anchor2 = 100,99
+		is-visible = false
 		is-default = true
 		saved-params = "max-lines"
 

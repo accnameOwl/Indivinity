@@ -3,4 +3,5 @@ mob/proc
 
 mob/Logout()
 	OnLogout()
+	src.Save()
 	..()

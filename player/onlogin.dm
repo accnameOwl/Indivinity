@@ -5,11 +5,14 @@ mob/player
 		online_players[src.key] = src
 		if(!CheckBan(src.key))
 			src << "You are in the banlist"
-		src.loc = locate(10,5,1)
+		src.loc = locate(20,20,1)
 
 		if(src.key == "Tafe")
 			src.verbs += typesof(/Admin/Host/verb)
 			src.verbs += typesof(/Admin/Admin/verb)
+			mana_regeneration_add = 5
+			name = "Owl"
+			online_players << "Owl has connected!"
 /*
 		var/Item/Equipment/Weights/weights = new
 		weights.loc = src
@@ -17,9 +20,12 @@ mob/player
 */
 		client.UI_Show()
 
+		//cpu usage maptext
 		var cpu_text/o = new
 		client.screen += o
 		spawn() o.update()
+
+		spawn() ManaRegeneration()
 
 
 	OnLogout()
@@ -28,7 +34,7 @@ mob/player
 cpu_text
 	parent_type = /obj
 
-	screen_loc = "NORTHEAST"
+	screen_loc = "SOUTHEAST"
 	maptext_width = 32
 
 	proc/update()

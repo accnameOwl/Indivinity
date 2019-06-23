@@ -5,12 +5,12 @@ Monster/monster1
 
 	//distance related variables
 	aggro_dist = 5
-	chase_dist = 10
+	chase_dist = 25
 	max_home_dist = 30
 	attack_reach_dist = 1
 	cast_reach_dist = 5
 
-	//chase speed ( sleeptime would be world.tick_lag * chase_speed )
+	//chase speed ((10/world.fps) * chase_speed)
 	chase_speed = 1.5
 	step_size = 2
 

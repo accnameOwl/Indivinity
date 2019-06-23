@@ -1,6 +1,6 @@
 #define DEBUG
 
-#define LOG 1
+//#define LOG
 
 #ifdef LOG
 	#define LOG(x) world.log << x
@@ -46,3 +46,5 @@
 //UI
 #define UI_LAYER 45
 #define SCREENEFFECT_LAYER 35
+
+//#define AREATRIGGER_ICON

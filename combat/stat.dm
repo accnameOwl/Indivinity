@@ -5,7 +5,7 @@ Stat/var
 	value = 0
 	limit = 0
 
-	experience = 0
+	experience = 1
 	limit_experience = 0
 	total_experience = 0
 
@@ -26,15 +26,15 @@ Stat/proc
 	AddExperience( xp )
 		experience += xp
 		total_experience += xp
-
-		. = level
+		var/levels = 0
+		. = levels
 		while( experience >= limit_experience )
 			limit += round( (level / 2) * value_multiplier)
 			if(name != "health" || name != "regen")
 				value = limit
 			++level
+			++levels
 			experience -= limit_experience
 			limit_experience = round( limit_experience* experience_multiplier)
-
 
 			world << "[name] level: [level]"

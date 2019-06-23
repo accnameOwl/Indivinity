@@ -9,6 +9,7 @@ mob/proc
 		//Turn to a ghost
 		spawn() TurnGhost(TRUE)
 		src.Stats_Set("health", "value", 0)
+		from.Stats_AddExperience("level",grant_experience)
 
 		if(can_respawn())
 			spawn(respawn_time()) OnRespawn()

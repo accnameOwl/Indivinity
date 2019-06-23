@@ -9,12 +9,12 @@ Monster
 	var
 		//distance related variables
 		aggro_dist = 5
-		chase_dist = 15
+		chase_dist = 35
 		max_home_dist = 30
 		attack_reach_dist = 1
 		cast_reach_dist = 5
 
-		//chase speed ( sleeptime would be world.tick_lag * chase_speed )
+		//chase speed ((10/world.fps) * chase_speed)
 		chase_speed = 10
 
 		//sleeping equals no target, no chasing. rest state
@@ -48,7 +48,7 @@ Monster
 	ChaseState()
 		set waitfor = 0
 		//conditions
-		if( !target.dead() || !dead())
+		if( !target.dead() || !dead() )
 			LOG("/Monster : ChaseState() \n src: [src]")
 
 			var
@@ -57,32 +57,28 @@ Monster
 				max_dist = get_dist( src, home_loc )
 			//chase loop
 			//condition: while distance between monster and target, and while there is a target
-			while(dist <= chase_dist && target && !dead())
+			while(dist <= chase_dist && target && !target.dead() && !dead())
 				//if by some reason target is removed, return with ResetState()
-				if(!target)
-					return ResetState()
 				//update direction and distance between monster and target
 				dist = get_dist( src, target )
 				dir = get_dir( src, locate(target.x, target.y, target.z) )
 				max_dist = get_dist( src, home_loc )
 
 				//default returnvalue set to step towards target
-				. = step(src, dir, step_size)
 
-				//if step fails, do a randomized step
-				if(!.)
-					step_rand(src)
+				if(dist > attack_reach_dist)
+
+					. = step(src, dir, step_size)
+
+					//if step fails, do a randomized step
+					if(!.)
+						step_rand(src)
 
 				if(max_home_dist && max_dist >= max_home_dist)
 					return ResetState()
-
-				//if there is an overwritten CastingState()
-				//do CastingState()
-				/*
-				if(dist <= cast_reach_dist)
-					CastingState()
-				*/
 				//forward to ResetState()
+
+				//attack state
 				if(dist <= attack_reach_dist)
 					AttackState()
 
@@ -92,7 +88,7 @@ Monster
 
 	AttackState()
 		if( world.time - last_attack_timestamp >= attack_speed )
-			LOG("/Monster : AttackState() \n src: [src]")
+			LOG("[src] /Monster : AttackState(), target = [target]")
 			if( target.dead() )
 				return ResetState()
 			last_attack_timestamp = world.time
@@ -105,6 +101,8 @@ Monster
 		var/dir = get_dir(src, home_loc)
 		LOG("/Monster : ResetState() \n src: [src]")
 		while(dist > 4)
+			if(target)
+				ChaseState()
 			. = step(src, dir, step_size)
 			if(!.)
 				step_rand(src)
@@ -129,7 +127,8 @@ Monster
 
 	HideAreatrigger()
 		areatrigger.Relocate(locate(0,0,0))
-#define AREATRIGGER_ICON
+
+
 
 //area trigger for monster ai
 obj/Areatrigger

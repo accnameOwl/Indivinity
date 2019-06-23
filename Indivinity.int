@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1561009722
-DIR: client combat icons\other monster player player\attacks screen screen\hud screen\images screen\images\UI 
+LAST_COMPILE_TIME: 1561300902
+DIR: atom client combat mob mob\spell monster monster\subtypes player player\attacks screen screen\hud screen\hud\ui screen\images screen\images\UI 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 512.1471
-WINDOW: turf\outside.dm;screen\images\UI\health_frame.dmi;screen\images\UI\mana_frame.dmi;screen\images\UI\stamina_frame.dmi;screen\hud\ui_bars.dm;client\updateloop.dm;player\attacks\punch.dm;icons\other\Glitterlance.dmi;player\attacks\glitterlance.dm;player\stats.dm;monster\monster_ai.dm;combat\damage.dm;monster\monster.dm;combat\combat_flags.dm;monster\monster_threat.dm;#define.dm
-FILE: monster\monster_threat.dm
+WINDOW: screen\images\UI\Hud_buttonssss2.png;screen\images\UI\hud_buttons.dmi;player\stats.dm;mob\_mob.dm;screen\images\UI\stamina_frame.dmi;screen\images\UI\player_frame.dmi;screen\images\UI\player_frame.png;screen\images\UI\health_frame.dmi;mob\write.dm;mob\read.dm;mob\login.dm;mob\logout.dm
+FILE: mob\logout.dm
 */
 // END_INTERNALS

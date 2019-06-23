@@ -3,8 +3,8 @@ client
 
 	New()
 		if((. = ..()))
-			KeyboardUpdate()
-			UIUpdate()
+			spawn KeyboardUpdate()
+			spawn UIUpdate()
 
 
 
@@ -24,4 +24,4 @@ client
 				sleep(10/world.fps)
 
 
-		KeyboardInput()
+//		KeyboardInput()

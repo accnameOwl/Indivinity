@@ -78,6 +78,9 @@ Hud/UI/Maskpart
 		blend_mode = BLEND_MULTIPLY
 	fg
 		icon_state = "fg"
+		maptext_x = 15
+		maptext_y = 2
+		maptext_width = 300
 	fill
 		icon_state = "fill"
 	mask
@@ -86,29 +89,3 @@ Hud/UI/Maskpart
 	New(loc,icon)
 		src.icon = icon
 		..()
-client
-	var
-		Hud/UI/Maskbar/Healthframe/health_frame = new
-		Hud/UI/Maskbar/Manaframe/mana_frame = new
-		Hud/UI/Maskbar/Staminaframe/stamina_frame = new	//Not added
-
-	proc
-		UI_Show()
-			screen.Add(health_frame, mana_frame)
-
-Hud/UI/Maskbar/Healthframe
-	icon = 'health_frame.dmi'
-	screen_loc = "WEST:15,NORTH:22"
-	width = 300
-	height = 20
-	orientation = EAST
-
-Hud/UI/Maskbar/Manaframe
-	icon = 'mana_frame.dmi'
-	screen_loc = "WEST:15,NORTH"
-	width = 300
-	height = 20
-	orientation = EAST
-Hud/UI/Maskbar/Staminaframe
-	icon = 'stamina_frame.dmi'
-	screen_loc = "WEST:15,NORTH:-22"
