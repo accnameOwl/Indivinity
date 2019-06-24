@@ -17,6 +17,8 @@ Monster
 	proc
 
 		UpdateThreat(mob/m, damage)
+			if(in_combat()==EXITED_COMBAT)
+				return ClearThreat()
 			if(!threat_damage[m])
 				threat_damage[m] = list()
 			if(!target)

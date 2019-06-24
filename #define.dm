@@ -31,8 +31,8 @@
 #define OUT_OF_COMBAT 0
 #define ENTERED_COMBAT 1
 //npc ai function, for losing aggro of target
-#define EXITED_COMBAT 2
-#define DROP_COMBAT_TIMER -50 //13 seconds after last hit.
+#define EXITED_COMBAT -1
+#define DROP_COMBAT_TIMER -50 //5 seconds after last hit.
 
 //ghost related
 #define VIEW_GHOST 7 // plane of invisibility to turn players when they turn into ghosts

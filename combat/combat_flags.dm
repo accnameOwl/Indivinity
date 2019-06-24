@@ -12,17 +12,6 @@ mob/var/list/combat_flags = list(\
 	)
 
 
-mob/player
-	var/testttttt = 10
-	proc
-		testyyy()
-			. = testttttt
-			testttttt = 5
-
-	verb
-		test()
-			world << testyyy()
-
 
 mob/proc
 	//use to call for, or change a combat flag inside "combat_flags"

@@ -4,6 +4,7 @@ Monster/monster4
 
 	icon = 'DungeonBoss2.dmi'
 	grant_experience = 90
+
 	bound_x = 53
 	bound_width = 46
 	bound_y = 24
@@ -14,7 +15,7 @@ Monster/monster4
 
 	aggro_dist = 5
 	chase_dist = 20
-	max_home_dist = 40
+	max_home_dist = 20
 	attack_reach_dist = 5
 
 	//chase speed ((10/world.fps) * chase_speed)
@@ -51,7 +52,7 @@ Monster/monster4
 		..()
 		combat_stats = list(\
 			"level" = new/Stat("level",0,120),
-			"health" = new/Stat("health", 10000, 1, 100, 1.1, 1.2),
+			"health" = new/Stat("health", 1000, 1, 100, 1.1, 1.2),
 			"mana" = new/Stat("mana", 5000, 1, 100),
 			"regen" = new/Stat("regen", 100, 1, 100, 1.1, 1.02),
 			"manaregen" = new/Stat("manaregen", 40, 1, 100),
@@ -59,5 +60,5 @@ Monster/monster4
 			"strength" = new/Stat("strength", 20, 1, 100),
 			"intellect" = new/Stat("intellect", 1, 1, 100))
 		block = 20
-		resist = 300
+		resist = 100
 		crit = 0

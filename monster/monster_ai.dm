@@ -95,11 +95,11 @@ Monster
 			DealDamage(target, Stats_Get("strength","value"))
 
 	ResetState()
+		LOG("/Monster : ResetState() \n src: [src]")
 		target = null
 		sleeping = 1
 		var/dist = get_dist(src, home_loc)
 		var/dir = get_dir(src, home_loc)
-		LOG("/Monster : ResetState() \n src: [src]")
 		while(dist > 4 && !target)
 			. = step(src, dir, step_size)
 			if(!.)
@@ -111,7 +111,6 @@ Monster
 			home_loc = src.loc
 			ClearThreat()
 			ShowAreatrigger(src)
-	//	ShowAreatrigger(src)
 
 	ShowAreatrigger(Monster/m)
 		if(!areatrigger)

@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1561342855
+LAST_COMPILE_TIME: 1561350438
 DIR: admin atom client combat mob mob\spell monster monster\subtypes player player\attacks screen screen\hud screen\hud\ui screen\images screen\images\UI 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 512.1471
-WINDOW: screen\images\UI\health_frame.dmi;mob\write.dm;mob\logout.dm;combat\stat.dm;mob\login.dm;combat\target.dm;combat\regeneration.dm;mob\read.dm;combat\damage.dm;client\updateloop.dm;combat\combat_flags.dm;monster\monster.dm;monster\monster_ai.dm;mob\Load.dm;mob\Save.dm;mob\del.dm;player\attacks\goldenspears.dm;player\attacks\firearrow.dm;player\stats.dm;admin\admin.dm;admin\host.dm;combat\turnghost.dm;dmf.dmf;client\keybinds_combat.dm;combat\ondeath.dm;screen\hud\ui\update.dm;combat\enteredcombat.dm;combat\exitedcombat.dm;combat\onrespawn.dm;screen\hud\ui\_maskbar.dm
-FILE: screen\hud\ui\_maskbar.dm
+WINDOW: screen\images\UI\health_frame.dmi;mob\write.dm;mob\logout.dm;combat\stat.dm;mob\login.dm;combat\target.dm;combat\regeneration.dm;mob\read.dm;combat\damage.dm;client\updateloop.dm;combat\combat_flags.dm;monster\monster.dm;monster\monster_ai.dm;screen\hud\ui\_maskbar.dm;monster\subtypes\monster4.dm;player\onlogin.dm;player\stats.dm;player\attacks\glitterlance.dm;combat\enteredcombat.dm;combat\exitedcombat.dm;combat\ondeath.dm;#define.dm;monster\monster_threat.dm;combat\cooldown.dm;combat\onrespawn.dm;types.dm
+FILE: combat\damage.dm
 */
 // END_INTERNALS
