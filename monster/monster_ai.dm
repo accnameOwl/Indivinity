@@ -100,19 +100,18 @@ Monster
 		var/dist = get_dist(src, home_loc)
 		var/dir = get_dir(src, home_loc)
 		LOG("/Monster : ResetState() \n src: [src]")
-		while(dist > 4)
-			if(target)
-				ChaseState()
+		while(dist > 4 && !target)
 			. = step(src, dir, step_size)
 			if(!.)
 				step_rand(src)
 			dist = get_dist(src, home_loc)
 			dir = get_dir(src, home_loc)
 			sleep(10/world.fps)
-		home_loc = src.loc
-
-		ClearThreat()
-		ShowAreatrigger(src)
+		if(!target)
+			home_loc = src.loc
+			ClearThreat()
+			ShowAreatrigger(src)
+	//	ShowAreatrigger(src)
 
 	ShowAreatrigger(Monster/m)
 		if(!areatrigger)

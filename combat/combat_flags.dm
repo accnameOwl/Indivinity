@@ -11,14 +11,32 @@ mob/var/list/combat_flags = list(\
 	"invinsible" = FALSE,
 	)
 
+
+mob/player
+	var/testttttt = 10
+	proc
+		testyyy()
+			. = testttttt
+			testttttt = 5
+
+	verb
+		test()
+			world << testyyy()
+
+
 mob/proc
 	//use to call for, or change a combat flag inside "combat_flags"
 	in_combat(flag)
+		if(flag != null)
+			combat_flags["in_combat"] = flag
+		return combat_flags["in_combat"]
+
+
 		if(flag == null)
 			return combat_flags["in_combat"]
-		combat_flags["in_combat"] = flag
-
+		combat_flags["can_respawn"] = flag
 	can_respawn(flag)
+	//	. = combat_flags["can_respawn"] = flag|combat_flags["can_respawn"]
 		if(flag == null)
 			return combat_flags["can_respawn"]
 		combat_flags["can_respawn"] = flag
@@ -51,8 +69,3 @@ mob/proc
 		if(flag == null)
 			return combat_flags["invinsible"]
 		combat_flags["invinsible"] = flag
-
-mob/Read(savefile/f)
-	combat_timestamp(0)
-	health_regeneration_trigger(FALSE)
-	in_combat(FALSE)

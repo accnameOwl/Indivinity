@@ -7,8 +7,9 @@ mob/proc
 		density = 0
 
 		//Turn to a ghost
-		spawn() TurnGhost(TRUE)
-		src.Stats_Set("health", "value", 0)
+		TurnGhost(TRUE)
+		Stats_Set("health", "value", 0)
+
 		from.Stats_AddExperience("level",grant_experience)
 
 		if(can_respawn())

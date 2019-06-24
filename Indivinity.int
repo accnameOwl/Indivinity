@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1561300902
-DIR: atom client combat mob mob\spell monster monster\subtypes player player\attacks screen screen\hud screen\hud\ui screen\images screen\images\UI 
+LAST_COMPILE_TIME: 1561342855
+DIR: admin atom client combat mob mob\spell monster monster\subtypes player player\attacks screen screen\hud screen\hud\ui screen\images screen\images\UI 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 512.1471
-WINDOW: screen\images\UI\Hud_buttonssss2.png;screen\images\UI\hud_buttons.dmi;player\stats.dm;mob\_mob.dm;screen\images\UI\stamina_frame.dmi;screen\images\UI\player_frame.dmi;screen\images\UI\player_frame.png;screen\images\UI\health_frame.dmi;mob\write.dm;mob\read.dm;mob\login.dm;mob\logout.dm
-FILE: mob\logout.dm
+WINDOW: screen\images\UI\health_frame.dmi;mob\write.dm;mob\logout.dm;combat\stat.dm;mob\login.dm;combat\target.dm;combat\regeneration.dm;mob\read.dm;combat\damage.dm;client\updateloop.dm;combat\combat_flags.dm;monster\monster.dm;monster\monster_ai.dm;mob\Load.dm;mob\Save.dm;mob\del.dm;player\attacks\goldenspears.dm;player\attacks\firearrow.dm;player\stats.dm;admin\admin.dm;admin\host.dm;combat\turnghost.dm;dmf.dmf;client\keybinds_combat.dm;combat\ondeath.dm;screen\hud\ui\update.dm;combat\enteredcombat.dm;combat\exitedcombat.dm;combat\onrespawn.dm;screen\hud\ui\_maskbar.dm
+FILE: screen\hud\ui\_maskbar.dm
 */
 // END_INTERNALS

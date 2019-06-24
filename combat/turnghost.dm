@@ -4,7 +4,7 @@ mob/proc
 		if( isplayer(src) || ismonster(src) )
 			if(flag)
 
-				if( src.client )
+				if( client )
 					//add ghost effect on screen
 					client.AddScreenEffect(/ScreenEffect/Ghost)
 
@@ -17,7 +17,7 @@ mob/proc
 
 			else
 
-				if( src.client )
+				if( client )
 					//remove ghost effect from screen
 					client.RemoveScreenEffect(/ScreenEffect/Ghost)
 

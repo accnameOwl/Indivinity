@@ -1,7 +1,7 @@
 mob/proc
 	OnLogout()
+		src.Save()
 
 mob/Logout()
 	OnLogout()
-	src.Save()
 	..()

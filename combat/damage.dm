@@ -26,7 +26,7 @@ mob/proc
 			else
 				spawn RenderDamageText("<b><font color=yellow>[damage]</font></b>",target.loc, target.step_x, target.step_y)
 
-			damage = prob(Stats_Get("crit","value")) ? damage * 2 : damage
+			damage = prob(crit) ? damage * 2 : damage
 
 			if(ismonster(target))
 				var/Monster/monster = target

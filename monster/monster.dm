@@ -32,6 +32,4 @@ Monster
 			"manaregen" = new/Stat("manaregen", 1, 1, 100),
 
 			"strength" = new/Stat("strength", 2, 1, 100),
-			"intellect" = new/Stat("intellect", 1, 1, 100),
-
-			"crit" = new/Stat("crit",4,1, 1#INF, 1, 1))
+			"intellect" = new/Stat("intellect", 1, 1, 100))

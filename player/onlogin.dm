@@ -2,22 +2,23 @@ var/list/online_players = list()
 
 mob/player
 	OnLogin()
-		online_players[src.key] = src
+		online_players.Add(src)
 		if(!CheckBan(src.key))
 			src << "You are in the banlist"
-		src.loc = locate(20,20,1)
+		if(!Load())
+			src.loc = locate(20,20,1)
 
-		if(src.key == "Tafe")
-			src.verbs += typesof(/Admin/Host/verb)
-			src.verbs += typesof(/Admin/Admin/verb)
-			mana_regeneration_add = 5
-			name = "Owl"
-			online_players << "Owl has connected!"
-/*
-		var/Item/Equipment/Weights/weights = new
-		weights.loc = src
-		EquipItem(weights)
-*/
+			if(src.key == "Tafe")
+				src.verbs += typesof(/Admin/Host/verb)
+				src.verbs += typesof(/Admin/Admin/verb)
+				mana_regeneration_add = 5
+				name = "Owl"
+				online_players << "Owl has connected!"
+	/*
+			var/Item/Equipment/Weights/weights = new
+			weights.loc = src
+			EquipItem(weights)
+	*/
 		client.UI_Show()
 
 		//cpu usage maptext

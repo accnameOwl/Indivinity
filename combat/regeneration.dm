@@ -38,14 +38,19 @@ mob/proc
 
 	ManaRegeneration()
 		set waitfor = 0
-		var/last_tick_of_mana_regen
-
+		var
+			__mana
+			__limit
+			last_tick_of_mana_regen = 0
 		while(src)
 			if(world.time >= last_tick_of_mana_regen)
-				if(Stats_Get("mana","value") < Stats_Get("mana","limit"))
+				__mana 	= Stats_Get("mana","value")
+				__limit	= Stats_Get("mana","limit")
+				if(__mana < __limit )
 					Stats_Add("mana","value", Stats_Get("mana","limit") / 100 + mana_regeneration_add)
 					last_tick_of_mana_regen = world.time + 5
-				else
+				if(__mana > __limit)
 					Stats_Set("mana","value", Stats_Get("mana","limit"))
-					last_tick_of_mana_regen = -1#INF
+					last_tick_of_mana_regen = world.time + 20
+
 			sleep(10/world.fps)
