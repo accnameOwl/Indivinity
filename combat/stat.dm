@@ -1,3 +1,4 @@
+//@Stat_type
 Stat/var
 	name = ""
 	level = 0

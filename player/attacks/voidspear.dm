@@ -12,31 +12,33 @@ mob/player/verb
 			new/obj/spell/voidspear(target.loc, target, Stats_Get("intellect","value")*0.92, get_dir(src,target))
 
 
-obj/spell/voidspear
 
-	icon = 'Blizzard Charge.dmi'
-	bound_x = 75
-	bound_y = 55
-	bound_width = 30
-	bound_height = 256
+obj/spell
+	voidspear
 
-	decay_time = 20
+		icon = 'Blizzard Charge.dmi'
+		bound_x = 75
+		bound_y = 55
+		bound_width = 30
+		bound_height = 256
 
-	New(location, mob/m, _damage, dir)
+		decay_time = 20
 
-		..(location, m, _damage)
-		src.dir = dir
-		Attack(m)
+		New(location, mob/m, _damage, dir)
 
-	Attack(mob/m)
-		spawn if( m )
-			flick("attack",src)
-			sleep(9)
-			usr.DealDamage(m, damage)
-		while(src)
-			if(src.loc == null)
-				break
-			src.loc = m.loc
-			src.step_x = m.step_x
-			src.step_y = m.step_y
-			sleep(10/world.fps)
+			..(location, m, _damage)
+			src.dir = dir
+			Attack(m)
+
+		Attack(mob/m)
+			spawn if( m )
+				flick("attack",src)
+				sleep(9)
+				usr.DealDamage(m, damage)
+			while(src)
+				if(src.loc == null)
+					break
+				src.loc = m.loc
+				src.step_x = m.step_x
+				src.step_y = m.step_y
+				sleep(10/world.fps)

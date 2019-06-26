@@ -13,3 +13,9 @@ proc
 		return istype(t, /Quest)
 	isstat( t )
 		return istype(t, /Stat)
+
+
+datum
+	proc
+		getType()
+			. = type

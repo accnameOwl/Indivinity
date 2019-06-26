@@ -10,10 +10,3 @@ mob/player/verb
 			if(m != src)
 				var/damage = prob(Stats_Get("crit","value")) ? Stats_Get("strength","value")*2 : Stats_Get("strength","value")
 				DealDamage(m,damage)
-
-mob/player/verb
-
-	Fireball()
-		set name = "Fireball"
-		set category = "Combat"
-

@@ -6,7 +6,3 @@ Hud
 
 	proc
 		Update()
-
-	Textbox
-		icon = 'textbox.png'
-		screen_loc = "14,TOP"

@@ -1,7 +1,7 @@
+//regeneration
 #define SLEEPTIME_CAP world.time+5
-
-mob/proc
-	HealthRegeneration()
+mob
+	proc/HealthRegeneration()
 		set waitfor = 0
 		if( in_combat() == OUT_OF_COMBAT && !dead() && !health_regeneration_trigger())
 			health_regeneration_trigger(TRUE)
@@ -35,22 +35,3 @@ mob/proc
 
 			Stats_Set("health", "value", Stats_Get("health", "limit"))
 			health_regeneration_trigger(FALSE)
-
-	ManaRegeneration()
-		set waitfor = 0
-		var
-			__mana
-			__limit
-			last_tick_of_mana_regen = 0
-		while(src)
-			if(world.time >= last_tick_of_mana_regen)
-				__mana 	= Stats_Get("mana","value")
-				__limit	= Stats_Get("mana","limit")
-				if(__mana < __limit )
-					Stats_Add("mana","value", Stats_Get("mana","limit") / 100 + mana_regeneration_add)
-					last_tick_of_mana_regen = world.time + 5
-				if(__mana > __limit)
-					Stats_Set("mana","value", Stats_Get("mana","limit"))
-					last_tick_of_mana_regen = world.time + 20
-
-			sleep(10/world.fps)

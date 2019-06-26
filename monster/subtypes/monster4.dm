@@ -52,7 +52,7 @@ Monster/monster4
 		..()
 		combat_stats = list(\
 			"level" = new/Stat("level",0,120),
-			"health" = new/Stat("health", 1000, 1, 100, 1.1, 1.2),
+			"health" = new/Stat("health", 10000000, 1, 100, 1.1, 1.2),
 			"mana" = new/Stat("mana", 5000, 1, 100),
 			"regen" = new/Stat("regen", 100, 1, 100, 1.1, 1.02),
 			"manaregen" = new/Stat("manaregen", 40, 1, 100),

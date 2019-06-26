@@ -1,6 +1,6 @@
 client
 	proc
-		UI_Show()
+		UIShow()
 
 			// player health frames
 			screen.Add(player_frame,health_frame, mana_frame, experience_frame)

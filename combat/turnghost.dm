@@ -1,6 +1,6 @@
 
-mob/proc
-	TurnGhost(flag)
+mob
+	proc/TurnGhost(flag)
 		if( isplayer(src) || ismonster(src) )
 			if(flag)
 

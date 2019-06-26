@@ -19,7 +19,7 @@ mob/player
 			weights.loc = src
 			EquipItem(weights)
 	*/
-		client.UI_Show()
+		client.UIShow()
 
 		//cpu usage maptext
 		var cpu_text/o = new

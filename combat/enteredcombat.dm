@@ -1,6 +1,6 @@
 
-mob/proc
-	EnteredCombat()
+mob
+	proc/EnteredCombat()
 		set background = 1
 
 		switch(in_combat())

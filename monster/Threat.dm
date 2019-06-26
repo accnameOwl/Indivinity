@@ -16,33 +16,36 @@ Monster
 
 	proc
 
-		UpdateThreat(mob/m, damage)
-			if(in_combat()==EXITED_COMBAT)
-				return ClearThreat()
+		UpdateThreat(mob/m, _damage)
 			if(!threat_damage[m])
 				threat_damage[m] = list()
 			if(!target)
 				FoundTarget(m)
 
-			threat_damage[m] += list(list("damage" = damage, "time" = world.time))
-			threat_total_damage[m] += damage
+			threat_damage[m].Add(new/Threat(world.time, _damage))
+			threat_total_damage[m] += _damage
 
-			var/i
-			for( i = 1, i <= threat_damage[m].len, i++)
-				//delete out-timed damages, and remove them from total damage
-				if(threat_damage[m][i]["time"] <= world.time - threat_duration)
-					threat_total_damage[m] -= threat_damage[m][i]["damage"]
-					threat_damage[m].Cut(2,i)
-				else
-					break
-			if(i > 1)
-				threat_damage[m].Cut(1,i)
+			for(var/Threat/t in threat_damage[m])
+				if(t.getTime() <= world.time - threat_duration)
+					threat_total_damage[m] -= t.getDamage()
+					threat_damage[m].Remove(t)
 			if( threat_total_damage[m] >= threat_highest_damage )
 				src.target = m
 				threat_highest_damage = threat_total_damage[m]
-
+			world.log << "[threat_total_damage[m]]"
 			LOG("[src] : /Monster - UpdateThread() : [src] = [threat_highest_damage]")
 
 		ClearThreat()
 			threat_damage.Cut()
 			threat_total_damage.Cut()
+
+Threat
+	var
+		time
+		damage
+	New(time, damage)
+		src.time = time
+		src.damage = damage
+	proc
+		getTime() . = time
+		getDamage() . = damage

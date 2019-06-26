@@ -1,0 +1,6 @@
+
+
+mob/player
+
+	var
+		

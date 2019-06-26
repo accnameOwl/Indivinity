@@ -1,5 +1,5 @@
-mob/proc
-	OnDeath(mob/from)
+mob
+	proc/OnDeath(mob/from)
 		//leave combat
 		in_combat(OUT_OF_COMBAT)
 		health_regeneration_trigger(FALSE)

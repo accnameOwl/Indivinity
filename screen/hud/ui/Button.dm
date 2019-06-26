@@ -5,6 +5,7 @@ client
 		Hud/UI/Button/Spells/button_spells = new
 		Hud/UI/Button/Save/button_save = new
 
+
 Hud/UI/Button
 
 	icon = 'hud_buttons.dmi'

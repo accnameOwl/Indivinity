@@ -1,6 +1,6 @@
 
-mob/proc
-	OnRespawn()
+mob
+	proc/OnRespawn()
 		TurnGhost(FALSE)
 		dead(FALSE)
 		density = 1
