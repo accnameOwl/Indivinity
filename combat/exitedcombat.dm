@@ -1,17 +1,12 @@
-mob/proc
-	ExitedCombat()
-		world << "ExitedCombat()"
+mob
+	proc/ExitedCombat()
 		//if src is npc, turn AI to LostAggroState()
-		if( isnpc(src) )
-			in_combat(EXITED_COMBAT)
-			//	src:LostAggroState()
-		//if src is a player, make him get out of combat
-		else
-			in_combat(OUT_OF_COMBAT)
 
-		//Trigger health Regeneration
-		if(!health_regeneration_trigger())
-			spawn() HealthRegeneration()
+		COMBAT_FLAG_INCOMBAT = ismonster(src) ? EXITED_COMBAT : OUT_OF_COMBAT
+		LOG("<[src.type]>[src]	ExitedCombat() FLAG<[COMBAT_FLAG_INCOMBAT]>")
+
+		if(!COMBAT_FLAG_HRT)
+			. = HealthRegeneration()
 
 		//reset time of last damage taken
-		combat_timestamp(0)
+		COMBAT_FLAG_TIMESTAMP = 0

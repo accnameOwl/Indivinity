@@ -1,20 +1,23 @@
 
-mob/proc
-	EnteredCombat()
+mob
+	proc/EnteredCombat()
 		set background = 1
 
-		//change in_combat flag
-		if(!in_combat())
-			//make sure there spawns NO MORE REGEN ontop of eachothers!
-			health_regeneration_trigger(FALSE)
+		switch(COMBAT_FLAG_INCOMBAT)
+			if(EXITED_COMBAT)
+				return
+			if(OUT_OF_COMBAT)
+				COMBAT_FLAG_HRT = FALSE
 
-		in_combat(ENTERED_COMBAT)
+		COMBAT_FLAG_INCOMBAT = ENTERED_COMBAT
+		LOG("<[src.type]>[src]	EnteredCombat() FLAG<[COMBAT_FLAG_INCOMBAT]>")
 
-
+		var/passed_time = 0
 		//loop while in combat.
-		while(in_combat() == ENTERED_COMBAT)
+		while(COMBAT_FLAG_INCOMBAT)
+			passed_time = COMBAT_FLAG_TIMESTAMP - world.time
 			//drop combat if it has passed 5 seconds since last damage taken.
-			var/passed_time = combat_timestamp() - world.time
 			if(passed_time <= DROP_COMBAT_TIMER)
-				ExitedCombat()
-			sleep(world.tick_lag * 2)
+				//breaks the loop by changing combat_flags["in_combat"] to OUT_OF_COMBAT
+				return ExitedCombat()
+			sleep(10/world.fps)

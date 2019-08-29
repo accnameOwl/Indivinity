@@ -13,5 +13,5 @@ Quest
 
 		objective_flag = QUEST_OBJECTIVE_FLAG_KILL
 
-		list/target_type_list = list(/monster/monster1,)
+		list/target_type_list = list(/Monster/monster1,)
 		objective_count = 1

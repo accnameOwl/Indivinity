@@ -1,4 +1,4 @@
-Tools/Host
+Admin/Host
 
 	verb
 		Reboot()

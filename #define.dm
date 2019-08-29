@@ -1,4 +1,8 @@
 #define DEBUG
+
+
+
+
 //define default constructor values for /Stat
 //used in Stat.New() - File "/combat/Stat.dm"
 #define STAT_DEFAULT_VALUE 1
@@ -20,9 +24,9 @@
 //combat related
 #define OUT_OF_COMBAT 0
 #define ENTERED_COMBAT 1
-//npc ai function, for losing aggro of target
-#define EXITED_COMBAT 2
-#define DROP_COMBAT_TIMER -10 //13 seconds after last hit.
+#define EXITED_COMBAT -1
+
+#define DROP_COMBAT_TIMER -50 //5 seconds after last hit.
 
 //ghost related
 #define VIEW_GHOST 7 // plane of invisibility to turn players when they turn into ghosts
@@ -30,3 +34,13 @@
 
 //AI trigger
 //#define AREATRIGGER_ICON
+
+
+
+//UI
+#define UI_LAYER 45
+#define SCREENEFFECT_LAYER 35
+
+//#define AREATRIGGER_ICON
+
+

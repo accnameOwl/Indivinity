@@ -1,3 +1,4 @@
+//@Stat_type
 Stat/var
 	name = ""
 	level = 0
@@ -5,7 +6,7 @@ Stat/var
 	value = 0
 	limit = 0
 
-	experience = 0
+	experience = 1
 	limit_experience = 0
 	total_experience = 0
 
@@ -26,14 +27,49 @@ Stat/proc
 	AddExperience( xp )
 		experience += xp
 		total_experience += xp
-
 		. = level
 		while( experience >= limit_experience )
 			limit += round( (level / 2) * value_multiplier)
-			value = limit
+			if(name != "health" || name != "regen")
+				value = limit
 			++level
 			experience -= limit_experience
 			limit_experience = round( limit_experience* experience_multiplier)
 
-
 			world << "[name] level: [level]"
+
+	Get(variable)
+		return vars[variable]
+	Set(variable, value)
+		vars[variable] = value
+	Add(variable, value)
+		vars[variable] += value
+	Sub(variable, value)
+		vars[variable] -= value
+
+
+//mob gain experience for _stats
+mob/proc
+	Stats_AddExperience( s, _experience)
+		if( s && _experience)
+			var Stat/_stats = src.combat_stats && src.combat_stats[s]
+			_stats.AddExperience( _experience )
+
+
+//Set, get and add
+mob/proc
+
+	//@speed:
+	//Check this later on, to increase efficiency.
+	//target: Remove variable declaration.
+	Stats_Get( name, variable )
+		return combat_stats[name].Get(variable)
+	Stats_Set( name, variable, value )
+		combat_stats[name].Set(variable, value)
+		. = combat_stats[name].Get(variable)
+	Stats_Add( name, variable, value)
+		combat_stats[name].Add(variable, value)
+		. = combat_stats[name].Get(variable)
+	Stats_Sub( name, variable, value)
+		combat_stats[name].Sub(variable, value)
+		. = combat_stats[name].Get(variable)

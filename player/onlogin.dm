@@ -2,24 +2,36 @@ var/list/online_players = list()
 
 mob/player
 	OnLogin()
-		online_players[src.key] = src
+		online_players.Add(src)
 		if(!CheckBan(src.key))
 			src << "You are in the banlist"
-		src.loc = locate(5,5,1)
 
-		if(src.key == "Tafe")
-			src.verbs += typesof(/Tools/Host/verb)
-			src.verbs += typesof(/Tools/Admin/verb)
-/*
-		var/Item/Equipment/Weights/weights = new
-		weights.loc = src
-		EquipItem(weights)
-*/
+		if(!src.Read("savefile/[ckey].sav"))
+			src.loc = locate(20,20,1)
 
+			if(src.key == "Tafe")
+				src.verbs += typesof(/Admin/Host/verb)
+				src.verbs += typesof(/Admin/Admin/verb)
+				mana_regeneration_add = 5
+				name = "Owl"
+				online_players << "Owl has connected!"
+	/*
+			var/Item/Equipment/Weights/weights = new
+			weights.loc = src
+			EquipItem(weights)
+	*/
+		else
+			src << "loaded"
 
+		client.UIShow()
+
+		//cpu usage maptext
 		var cpu_text/o = new
 		client.screen += o
 		spawn() o.update()
+
+		spawn() ManaRegeneration()
+		LOG("&lt;[src.type]&gt;[src]	OnLogin()")
 
 
 	OnLogout()
@@ -28,7 +40,7 @@ mob/player
 cpu_text
 	parent_type = /obj
 
-	screen_loc = "NORTHEAST"
+	screen_loc = "SOUTHEAST"
 	maptext_width = 32
 
 	proc/update()
@@ -37,4 +49,4 @@ cpu_text
 				maptext = "cpu: <font color=#FF5555>[world.cpu]%</font>"
 			else
 				maptext = "cpu: [world.cpu]%"
-			sleep(world.tick_lag)
+			sleep(10/world.fps)
