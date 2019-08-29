@@ -6,11 +6,13 @@ mob/player/verb
 		set category = "Combat"
 		var/mana_cost = 10
 		if(!OnCooldown("glitterlance") && !OnCooldown("GCD") && target  && Stats_Get("mana","value") >= mana_cost)
+			var/d = Stats_Get("strength","value")
 			SetCooldown("glitterlance", GLITTERLANCE_CD)
 			SetCooldown("GCD",GCD_CD)
-			src.Stats_AddExperience("strength", 30)
+			Stats_AddExperience("strength", 30)
 			Stats_Sub("mana","value",mana_cost)
-			new/obj/spell/glitterlance(target.loc, target, Stats_Get("strength","value"), get_dir(src,target))
+			LOG("<[src.type]>[src]	Glitterlance() target<[target]> damage<[d]>")
+			new/obj/spell/glitterlance(target.loc, target, d, get_dir(src,target))
 
 obj/spell
 

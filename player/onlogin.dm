@@ -5,7 +5,8 @@ mob/player
 		online_players.Add(src)
 		if(!CheckBan(src.key))
 			src << "You are in the banlist"
-		if(!Load())
+
+		if(!src.Read("savefile/[ckey].sav"))
 			src.loc = locate(20,20,1)
 
 			if(src.key == "Tafe")
@@ -19,6 +20,9 @@ mob/player
 			weights.loc = src
 			EquipItem(weights)
 	*/
+		else
+			src << "loaded"
+
 		client.UIShow()
 
 		//cpu usage maptext
@@ -27,6 +31,7 @@ mob/player
 		spawn() o.update()
 
 		spawn() ManaRegeneration()
+		LOG("&lt;[src.type]&gt;[src]	OnLogin()")
 
 
 	OnLogout()

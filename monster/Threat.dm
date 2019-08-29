@@ -22,6 +22,7 @@ Monster
 			if(!target)
 				FoundTarget(m)
 
+
 			threat_damage[m].Add(new/Threat(world.time, _damage))
 			threat_total_damage[m] += _damage
 
@@ -29,13 +30,14 @@ Monster
 				if(t.getTime() <= world.time - threat_duration)
 					threat_total_damage[m] -= t.getDamage()
 					threat_damage[m].Remove(t)
-			if( threat_total_damage[m] >= threat_highest_damage )
+			LOG("<[src.type]>[src]	UpdateThreat() target<[target]> mob<[m]> damage<[_damage]>")
+			if( threat_total_damage[m] >= threat_highest_damage  && m != target)
 				src.target = m
 				threat_highest_damage = threat_total_damage[m]
-			world.log << "[threat_total_damage[m]]"
-			LOG("[src] : /Monster - UpdateThread() : [src] = [threat_highest_damage]")
+				LOG("<[src.type]>[src]	UpdateThreat() new_target<[target]> threat<[threat_highest_damage]>")
 
 		ClearThreat()
+			LOG("<[src.type]>[src]	ClearThreat()")
 			threat_damage.Cut()
 			threat_total_damage.Cut()
 

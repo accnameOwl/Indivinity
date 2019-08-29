@@ -1,16 +1,6 @@
 
 
-//save!!!!!!!
-mob/proc/Save()
 
-	if(fexists("savefile/[ckey].txt"))
-		fdel("savefile/[ckey].txt")
-	var/savefile/F = new("savefile/[ckey].txt")
-	F["src"] << src
-	F["x"] << x
-	F["y"] << y
-	F["z"] << z
-	src.Write(F)
 
 
 /*

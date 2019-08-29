@@ -1,12 +1,6 @@
 #define DEBUG
 
-//#define LOG
 
-#ifdef LOG
-	#define LOG(x) world.log << x
-#else
-	#define LOG(x)
-#endif
 
 
 //define default constructor values for /Stat
@@ -30,8 +24,8 @@
 //combat related
 #define OUT_OF_COMBAT 0
 #define ENTERED_COMBAT 1
-//npc ai function, for losing aggro of target
 #define EXITED_COMBAT -1
+
 #define DROP_COMBAT_TIMER -50 //5 seconds after last hit.
 
 //ghost related

@@ -89,3 +89,4 @@ Hud/UI/Maskbar/TargetHealthbar
 		while(src)
 			loc = owner.loc
 			sleep(1)
+

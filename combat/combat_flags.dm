@@ -1,3 +1,11 @@
+#define COMBAT_FLAG_DEAD		combat_flags["dead"]
+#define COMBAT_FLAG_CANRESPAWN	combat_flags["can_respawn"]
+#define COMBAT_FLAG_RESPAWNTIME combat_flags["respawn_time"]
+#define COMBAT_FLAG_SEEGHOSTS	combat_flags["see_ghosts"]
+#define COMBAT_FLAG_INCOMBAT	combat_flags["in_combat"]
+#define COMBAT_FLAG_TIMESTAMP	combat_flags["combat_timestamp"]
+#define COMBAT_FLAG_HRT			combat_flags["health_regeneration_trigger"]
+#define COMBAT_FLAG_INVINSIBLE	combat_flags["invinsible"]
 
 
 mob

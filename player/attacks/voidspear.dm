@@ -4,12 +4,14 @@ mob/player/verb
 		set name = "Void Spear"
 		set category = "Combat"
 		var/mana_cost = 40
-		if(!OnCooldown("voidspear") && !OnCooldown("GCD") && target  && Stats_Get("mana","value") >= mana_cost)
+		if(!OnCooldown("voidspear") && !OnCooldown("GCD") && target  && combat_stats["mana"].value >= mana_cost)
+			var/d = combat_stats["intellect"].value*0.92
 			SetCooldown("voidspear", VOIDSPEAR_CD)
 			SetCooldown("GCD",GCD_CD)
 			src.Stats_AddExperience("intellect", 30)
 			Stats_Sub("mana","value",mana_cost)
-			new/obj/spell/voidspear(target.loc, target, Stats_Get("intellect","value")*0.92, get_dir(src,target))
+			LOG("<[src.type]>[src]	Voidspear() target<[target]> damage<[d]>")
+			new/obj/spell/voidspear(target.loc, target, d, get_dir(src,target))
 
 
 

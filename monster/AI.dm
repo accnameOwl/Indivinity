@@ -41,7 +41,7 @@ Monster
 		if(!target)
 			target = m
 			sleeping = 0
-			LOG("/Monster : FoundTarget() \n src: [src] \n target: [target]")
+			LOG("<[src.type]>[src]	FoundTarget() target<[target]>")
 			HideAreatrigger()
 			ChaseState()
 
@@ -49,7 +49,7 @@ Monster
 		set waitfor = 0
 		//conditions
 		if( !target.dead() || !dead() )
-			LOG("/Monster : ChaseState() \n src: [src]")
+			LOG("<[src.type]>[src]	ChaseState() target<[target]>")
 
 			var
 				dist = get_dist( src, target )
@@ -88,14 +88,14 @@ Monster
 
 	AttackState()
 		if( world.time - last_attack_timestamp >= attack_speed )
-			LOG("[src] /Monster : AttackState(), target = [target]")
 			if( target.dead() )
 				return ResetState()
 			last_attack_timestamp = world.time
 			DealDamage(target, Stats_Get("strength","value"))
+			LOG("<[src.type]>[src]	AttackState() target<[target]>")
 
 	ResetState()
-		LOG("/Monster : ResetState() \n src: [src]")
+		LOG("<[src.type]>[src]	ResetState()")
 		target = null
 		sleeping = 1
 		var/dist = get_dist(src, home_loc)
@@ -111,6 +111,7 @@ Monster
 			home_loc = src.loc
 			ClearThreat()
 			ShowAreatrigger(src)
+			LOG("<[src.type]>[src]	ResetState() home<[home_loc]>")
 
 	ShowAreatrigger(Monster/m)
 		if(!areatrigger)
@@ -141,6 +142,7 @@ obj/Areatrigger
 	proc
 		Relocate(location)
 			src.loc = location
+			LOG("<[src.type]>[src]	Relocate() location<[src.loc]> owner<[owner]>")
 		//The object needs to portray correct bounds in pixel movement.
 		//And also to scale, relative to parent_monster's aggro_dist
 
@@ -186,5 +188,5 @@ obj/Areatrigger
 			owner.FoundTarget(a)
 
 	Del()
-		world.log << "[src]:/Areatrigger.Del()"
+		LOG("&lt;[src.type]&gt;[src]	Del() owner&lt;[owner]&gt;")
 		..()

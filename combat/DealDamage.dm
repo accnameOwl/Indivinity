@@ -1,35 +1,45 @@
 
+#define CRIT 3
+#define BLOCK 2
+#define PARRY 1
+#define NONE 0
+
 mob
 	//called by attacker, to target
 	proc/DealDamage( mob/target, damage)
-		if( isplayer(target) || isnpc(target) || !target.dead() )
+		if( !target.COMBAT_FLAG_DEAD )
 			//if you are not in combat, call EnteredCombat()
-			if( in_combat() == OUT_OF_COMBAT )
+			if( COMBAT_FLAG_INCOMBAT == OUT_OF_COMBAT )
 				spawn EnteredCombat()
-
 			//set timestamp since last time you did damage
-			combat_timestamp(world.time)
-
-			var/t = prob(target.block-hit) ? 2 : prob(crit)
-
+			COMBAT_FLAG_TIMESTAMP = world.time
+			var/t = prob(target.block - hit) ? BLOCK : prob(target.parry - hit) ? PARRY : prob(crit) ? CRIT : NONE
+			damage = round(damage / 100 * (100-target.resist) )
 			switch(t)
-				if(2) //block
+				if(BLOCK)
+					damage = round(damage * 0.6)
+
+
+					spawn RenderDamageText("<b><font COLOR=white>[damage]</font></b>")
+				if(PARRY)
 					damage = 0
-					spawn RenderDamageText("<b>blocked!</b>", target.loc, target.step_x, target.step_y)
-				if(1) //crit
-					damage = round(damage * 2 - target.resist)
-					spawn RenderDamageText("<b><font color=#FF4500 style=font-size:8;>[damage]</font></b>", target.loc, target.step_x, target.step_y)
-				if(0) //standard
-					damage = round(damage - target.resist )
-					spawn RenderDamageText("<b><font color=yellow style=font-size:3;>[damage]</font></b>",target.loc, target.step_x, target.step_y)
 
-			if(ismonster(target))
-				//var/Monster/monster = target
-				spawn target:UpdateThreat(src,damage)
 
+					spawn RenderDamageText("<b>Parried!</b>", target.loc)
+				if(CRIT)
+					damage = round(damage*2 )
+
+
+					spawn RenderDamageText("<b><font COLOR=#FF4500 SIZE=+3>[damage]</font></b>", target.loc)
+				if(0)
+
+
+					spawn RenderDamageText("<b><font COLOR=yellow SIZE=+1>[damage]</font></b>",target.loc)
+
+			spawn LOG("<[src.type]>[src]	DealDamage() target<[target]> damage<[damage]>")
 			//continue by following up the damage
-			target.Stats_Sub("health", "value", damage)
+			target.combat_stats["health"].value -= damage
 			target.OnDamage(src)
 
-			if(target && target.dead())
+			if(target && target.COMBAT_FLAG_DEAD)
 				spawn SetTarget(null)

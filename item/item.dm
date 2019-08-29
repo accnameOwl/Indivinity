@@ -13,6 +13,7 @@ Item
 		weights = 10
 		*/
 		var/slot = 0
+
 		verb
 			PickUp()
 				set name = "Pick up"

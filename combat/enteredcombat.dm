@@ -3,17 +3,19 @@ mob
 	proc/EnteredCombat()
 		set background = 1
 
-		switch(in_combat())
-			if(EXITED_COMBAT) // monter AI
+		switch(COMBAT_FLAG_INCOMBAT)
+			if(EXITED_COMBAT)
 				return
 			if(OUT_OF_COMBAT)
-				health_regeneration_trigger(FALSE)
-		in_combat(ENTERED_COMBAT)
+				COMBAT_FLAG_HRT = FALSE
+
+		COMBAT_FLAG_INCOMBAT = ENTERED_COMBAT
+		LOG("<[src.type]>[src]	EnteredCombat() FLAG<[COMBAT_FLAG_INCOMBAT]>")
 
 		var/passed_time = 0
 		//loop while in combat.
-		while(in_combat())
-			passed_time = combat_timestamp() - world.time
+		while(COMBAT_FLAG_INCOMBAT)
+			passed_time = COMBAT_FLAG_TIMESTAMP - world.time
 			//drop combat if it has passed 5 seconds since last damage taken.
 			if(passed_time <= DROP_COMBAT_TIMER)
 				//breaks the loop by changing combat_flags["in_combat"] to OUT_OF_COMBAT

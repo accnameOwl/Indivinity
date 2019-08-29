@@ -33,3 +33,6 @@ Monster
 
 			"strength" = new/Stat("strength", 2, 1, 100),
 			"intellect" = new/Stat("intellect", 1, 1, 100))
+	OnDamage(mob/from, damage)
+		..(from)
+		UpdateThreat(from, damage)

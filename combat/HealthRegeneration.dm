@@ -23,7 +23,7 @@ mob
 					src.Stats_Add("health","value", amount*2)
 
 					//output amount
-					LOG("regen amount: [amount]")
+					LOG("<[src.type]>[src]	HealthRegeneration() FLAG<true>")
 
 					//grant experience to regeneration
 					src.Stats_AddExperience("regen", REGEN_EXPERIENCE_GAIN)

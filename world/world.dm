@@ -8,6 +8,8 @@ world
 
 	view = "27x16"		// show up to 6 tiles outward from center (13x13 view)
 
+	New()
+		log = file("world.log")
 
 // Make objects move 8 pixels per tick when walking
 

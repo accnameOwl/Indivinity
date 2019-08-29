@@ -36,9 +36,9 @@ Hud/UI/Button
 
 	Save
 		icon_state = "save"
-		screen_loc = "SOUTH,CENTER+7"
+		screen_loc = "SOUTH,CENTER"
 
 		Click()
 			usr << "Saving..."
-			sleep(usr.Save())
+			sleep(usr.Write())
 			usr << "Saved!"

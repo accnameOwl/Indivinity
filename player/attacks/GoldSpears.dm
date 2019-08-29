@@ -1,20 +1,23 @@
 mob/player/verb
 
 	GoldSpears()
-		set name = "Gold spears"
+		set name = "Goldspears"
 		set category = "Combat"
 		var/mana_cost = 120
-		if(!OnCooldown("goldspears") && !OnCooldown("GCD") && target  && Stats_Get("mana","value") >= mana_cost)
+		if(!OnCooldown("goldspears") && !OnCooldown("GCD") && target  && combat_stats["mana"].value >= mana_cost)
+			var/d = combat_stats["intellect"].value * 1.16
 			SetCooldown("goldspears", GOLDENSPEARS_CD)
 			SetCooldown("GCD",GCD_CD)
-			src.Stats_AddExperience("intellect", 300)
-			Stats_Sub("mana","value",mana_cost)
+
+			combat_stats["intellect"].AddExperience(300)
+			combat_stats["mana"].value -= mana_cost
+			LOG("<[src.type]>[src]	GoldSpears() target<[target]> damage<[d]>")
 
 			var/obj/spell/goldspears/player/i = new
 			src.overlays += i
 			spawn(20)
 				src.overlays-=i
-				new/obj/spell/goldspears/target(target.loc, target, Stats_Get("intellect","value")*1.16, get_dir(src,target))
+				new/obj/spell/goldspears/target(target.loc, target, d, get_dir(src,target))
 
 obj/spell
 

@@ -1,2 +1,2 @@
 client
-	fps = 60
+	fps = 40

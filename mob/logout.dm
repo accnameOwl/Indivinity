@@ -1,6 +1,6 @@
 mob/proc
 	OnLogout()
-		src.Save()
+		src.Write("savefile/[ckey].sav")
 
 mob/Logout()
 	OnLogout()

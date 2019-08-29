@@ -2,10 +2,11 @@ mob
 	proc/ExitedCombat()
 		//if src is npc, turn AI to LostAggroState()
 
-		in_combat( ismonster(src) ? EXITED_COMBAT : OUT_OF_COMBAT )
+		COMBAT_FLAG_INCOMBAT = ismonster(src) ? EXITED_COMBAT : OUT_OF_COMBAT
+		LOG("<[src.type]>[src]	ExitedCombat() FLAG<[COMBAT_FLAG_INCOMBAT]>")
 
-		if(!health_regeneration_trigger())
+		if(!COMBAT_FLAG_HRT)
 			. = HealthRegeneration()
 
 		//reset time of last damage taken
-		combat_timestamp(0)
+		COMBAT_FLAG_TIMESTAMP = 0

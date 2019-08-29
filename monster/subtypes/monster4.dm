@@ -60,5 +60,5 @@ Monster/monster4
 			"strength" = new/Stat("strength", 20, 1, 100),
 			"intellect" = new/Stat("intellect", 1, 1, 100))
 		block = 20
-		resist = 100
+		resist = 0
 		crit = 0

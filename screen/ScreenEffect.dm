@@ -12,11 +12,13 @@ client/proc
 
 		//render it on screen
 		screen += global.screen_effects[effect_type]
+		LOG("<[src.type]>[src]	AddScreenEffect() effect_type<[effect_type]>")
 
 	RemoveScreenEffect(effect_type)
 		//remove screen_effect
 		//but effect_type is still existing in global.screen_effects
 		screen -= global.screen_effects[effect_type]
+		LOG("<[src.type]>[src]	RemoveScreenEffect() effect_type<[effect_type]>")
 
 
 ScreenEffect
