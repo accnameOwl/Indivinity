@@ -41,12 +41,13 @@ cpu_text
 	parent_type = /obj
 
 	screen_loc = "SOUTHEAST"
-	maptext_width = 32
+	maptext_width = 64
+	maptext_height=64
 
 	proc/update()
 		while(src)
 			if(world.cpu >= 0)
-				maptext = "cpu: <font color=#FF5555>[world.cpu]%</font>"
+				maptext = "<font size=18px>cpu: <font color=#FF5555>[world.cpu]%</font></font>"
 			else
-				maptext = "cpu: [world.cpu]%"
+				maptext = "<font size=18px>cpu: [world.cpu]%</font>"
 			sleep(10/world.fps)

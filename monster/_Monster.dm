@@ -10,7 +10,6 @@ Monster
 	bound_width = 8
 	bound_height = 8
 
-
 	proc
 		FoundTarget(mob/m)
 		ChaseState()
@@ -21,7 +20,6 @@ Monster
 		ShowAreatrigger()
 		HideAreatrigger()
 		GetChaseDist(loc)
-
 
 	New()
 		..()

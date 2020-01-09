@@ -10,7 +10,7 @@ mob
 				COMBAT_FLAG_HRT = FALSE
 
 		COMBAT_FLAG_INCOMBAT = ENTERED_COMBAT
-		LOG("<[src.type]>[src]	EnteredCombat() FLAG<[COMBAT_FLAG_INCOMBAT]>")
+		LOGCOMBAT(src,"EnteredCombat()","combat_flags<in_combat>=[COMBAT_FLAG_INCOMBAT];")
 
 		var/passed_time = 0
 		//loop while in combat.

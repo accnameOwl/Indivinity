@@ -34,5 +34,3 @@ Monster/monster1
 
 	OnDeath(mob/player/from)
 		..(from)
-		if(from.quest_list["1"] && !from.quest_list["1"].complete)
-			from.QuestAddCount()

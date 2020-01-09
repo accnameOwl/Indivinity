@@ -5,15 +5,15 @@ Monster/monster4
 	icon = 'DungeonBoss2.dmi'
 	grant_experience = 90
 
-	bound_x = 53
-	bound_width = 46
+	bound_x = 68
+	bound_width = 24
 	bound_y = 24
-	bound_height = 30
+	bound_height = 24
 
 //	pixel_x = -40
 //	pixel_y = -15
 
-	aggro_dist = 5
+	aggro_dist = 10
 	chase_dist = 20
 	max_home_dist = 20
 	attack_reach_dist = 5
@@ -52,7 +52,7 @@ Monster/monster4
 		..()
 		combat_stats = list(\
 			"level" = new/Stat("level",0,120),
-			"health" = new/Stat("health", 10000000, 1, 100, 1.1, 1.2),
+			"health" = new/Stat("health", 10000, 1, 100, 1.1, 1.2),
 			"mana" = new/Stat("mana", 5000, 1, 100),
 			"regen" = new/Stat("regen", 100, 1, 100, 1.1, 1.02),
 			"manaregen" = new/Stat("manaregen", 40, 1, 100),

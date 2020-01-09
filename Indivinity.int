@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1562189441
-DIR: monster monster\subtypes player player\attacks screen screen\hud screen\hud\ui screen\images world 
+LAST_COMPILE_TIME: 1578352664
+DIR: admin atom mob mob\spell monster monster\subtypes npc player player\attacks player\quest screen screen\hud screen\hud\ui screen\images world Lib 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
-LAST_COMPILE_VERSION: 512.1471
-WINDOW: player\Quest.dm;player\OnLogin.dm;player\Move.dm;player\Inventory.dm;player\Equipments.dm;player\_player.dm;monster\Threat.dm;monster\AI.dm;combat\OnDamage.dm;combat\HealthRegeneration.dm;combat\ExitedCombat.dm;combat\EnteredCombat.dm;logging.dm;screen\hud\ui\ChatWindow.dm;screen\hud\ui\Frame.dm;screen\hud\ui\UIUpdate.dm;screen\hud\ui\_maskbar.dm;monster\_Monster.dm;monster\subtypes\monster1.dm;monster\subtypes\monster4.dm;player\Texture.dm;player\attacks\_spell_cooldowns.dm;player\attacks\Firearrow.dm;player\attacks\VoidSpear.dm;player\attacks\Punch.dm;screen\ScreenEffect.dm;player\Save.dm;types.dm
-FILE: types.dm
+LAST_COMPILE_VERSION: 512.1488
+WINDOW: daycyclus\daynightcycle.dm;mob\spell\spell.dm;combat\cooldown.dm;combat\RenderDamageText.dm;monster\Threat.dm;combat\DealDamage.dm;combat\enteredcombat.dm;combat\combat_flags.dm;combat\exitedcombat.dm;combat\HealthRegeneration.dm;combat\ManaRegeneration.dm;combat\OnDamage.dm;combat\ondeath.dm;combat\onrespawn.dm;combat\SetTarget.dm;combat\stat.dm;combat\turnghost.dm;monster\_Monster.dm;monster\AI.dm;#define.dm;client\keybinds.dm;screen\hud\ui\UIShow.dm;screen\hud\hud.dm;screen\hud\TargetUI.dm;admin\tools.dm;atom\atom.dm;player\onlogin.dm;Indivinity.dme;daycyclus\lighting.dm;mob\Save.dm
+FILE: mob\Save.dm
 */
 // END_INTERNALS

@@ -1,7 +1,18 @@
 
 
+mob/player
+	var
+		savefile/__SAVEFILE = new("savefiles/save.sav")
 
+	Write()
+		..()
+		var/savefile/__SAVE = new("savefiles/[key].sav")
+		__SAVE << src
 
+	Read()
+		..()
+		var/savefile/__SAVE = new("savefiles/[key].sav")
+		__SAVE >> src
 
 /*
 

@@ -14,6 +14,8 @@ mob
 			//become a ghost
 			invisibility = VIEW_GHOST
 
+			LOGCOMBAT(src,"TurnGhost([flag])","see_ghosts=TRUE;see_invisible=[VIEW_GHOST];invisibility=[VIEW_GHOST];")
+
 		else
 
 			if( client )
@@ -29,3 +31,4 @@ mob
 
 			//turn from ghost
 			invisibility = VIEW_ALIVE
+			LOGCOMBAT(src,"TurnGhost([flag])","see_ghosts=FALSE;see_invisible=FALSE;invisibility=[VIEW_ALIVE];")

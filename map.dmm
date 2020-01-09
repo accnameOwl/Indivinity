@@ -43,10 +43,11 @@
 "Q" = (/turf/outside/grass,/turf/outside/hills/west,/area)
 "R" = (/turf/outside/hills/surface_center,/turf/outside/hills/east,/area)
 "S" = (/turf/outside/hills/surface_center,/turf/outside/hills/b_east,/area)
-"T" = (/turf/outside/grass,/Monster/monster4,/turf/outside/sand/south,/area)
-"U" = (/turf/outside/grass,/map_misc/statue/three,/turf/outside/sand/north,/area)
-"V" = (/turf/outside/grass,/map_misc/statue/four,/turf/outside/sand/northeast,/area)
-"W" = (/turf/outside/grass,/map_misc/statue/two,/turf/outside/sand/east,/area)
+"T" = (/mob/npc/questtest,/turf/outside/sand,/area)
+"U" = (/turf/outside/grass,/Monster/monster4,/turf/outside/sand/south,/area)
+"V" = (/turf/outside/grass,/map_misc/statue/three,/turf/outside/sand/north,/area)
+"W" = (/turf/outside/grass,/map_misc/statue/four,/turf/outside/sand/northeast,/area)
+"X" = (/turf/outside/grass,/map_misc/statue/two,/turf/outside/sand/east,/area)
 "Y" = (/Monster/monster4,/turf/outside/grass,/area)
 
 (1,1,1) = {"
@@ -91,7 +92,7 @@ bbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbdeelccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbdeelcccccTchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbgcccccccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 tLLLLLJbbbbbbbbbgccccccccccmefbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 KMMMMMMMbbbbbbdelccccccccccccmefbbbbbbbbbbbbbbbbbbbbbbbbbbbb
@@ -101,10 +102,10 @@ QrrrrrRMbYbgcccccccccchbbbbgccchbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 sIIIIISMbbbgccccccniiijbbbbkiiijbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbgcccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbgcccccchbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbkiiiTiijbbbbbbbbbbbdeeeefbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbkiiiUiijbbbbbbbbbbbdeeeefbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbgcccchbbbbbbbbbbbbbbbbbbbbbbbb
-bbbpbbbdUVbbbbbbbbbbbbbbbbbbbbgcccchbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbgxWbbbbbbbbbbbbbbbbbbbbgcccchbbbbbbbbbbbbbbbbbbbbbbbb
+bbbpbbbdVWbbbbbbbbbbbbbbbbbbbbgcccchbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbgxXbbbbbbbbbbbbbbbbbbbbgcccchbbbbbbbbbbbbbbbbbbbbbbbb
 bbuvwbbkijbbbbbbbbbbbbbbbbbdeelcccchbbbbbbbbbbbbbbbbbbbbbbbb
 byzABCbbbbbbbbbbbbYbbbbbbbbgccccccchbbbbbbbbbbbbbbbbbbbbbbbb
 bDEFGHbbbbbbbbbbbbbbbbbbbbbkiiiiiiijbbbbbbbbbbbbbbbbbbbbbbbb

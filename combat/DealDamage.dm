@@ -18,25 +18,17 @@ mob
 			switch(t)
 				if(BLOCK)
 					damage = round(damage * 0.6)
-
-
 					spawn RenderDamageText("<b><font COLOR=white>[damage]</font></b>")
 				if(PARRY)
 					damage = 0
-
-
 					spawn RenderDamageText("<b>Parried!</b>", target.loc)
 				if(CRIT)
-					damage = round(damage*2 )
-
-
+					damage = round(damage*2)
 					spawn RenderDamageText("<b><font COLOR=#FF4500 SIZE=+3>[damage]</font></b>", target.loc)
 				if(0)
-
-
 					spawn RenderDamageText("<b><font COLOR=yellow SIZE=+1>[damage]</font></b>",target.loc)
 
-			spawn LOG("<[src.type]>[src]	DealDamage() target<[target]> damage<[damage]>")
+			spawn LOGCOMBAT("[src]","DealDamage()","target=[target]; damage=[damage];")
 			//continue by following up the damage
 			target.combat_stats["health"].value -= damage
 			target.OnDamage(src)

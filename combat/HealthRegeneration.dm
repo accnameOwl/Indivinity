@@ -23,7 +23,7 @@ mob
 					src.Stats_Add("health","value", amount*2)
 
 					//output amount
-					LOG("<[src.type]>[src]	HealthRegeneration() FLAG<true>")
+					LOGCOMBAT(src,"HealthRegeneration()","combat_flags<health_regeneration_trigger>=[TRUE];")
 
 					//grant experience to regeneration
 					src.Stats_AddExperience("regen", REGEN_EXPERIENCE_GAIN)

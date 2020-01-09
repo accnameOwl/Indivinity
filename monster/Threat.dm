@@ -26,20 +26,24 @@ Monster
 			threat_damage[m].Add(new/Threat(world.time, _damage))
 			threat_total_damage[m] += _damage
 
+			//clear threat that is out of thread_duration.
+			//this is to remove bloatstored damage that is irrelevant.
+			//
+			//all damage after 5 seconds is irrelevant in calculation.
 			for(var/Threat/t in threat_damage[m])
 				if(t.getTime() <= world.time - threat_duration)
 					threat_total_damage[m] -= t.getDamage()
 					threat_damage[m].Remove(t)
-			LOG("<[src.type]>[src]	UpdateThreat() target<[target]> mob<[m]> damage<[_damage]>")
+			LOGAI("<[src.type]>[src]","UpdateThread()","target=[target];mob=[m];damage=[_damage];")
 			if( threat_total_damage[m] >= threat_highest_damage  && m != target)
 				src.target = m
 				threat_highest_damage = threat_total_damage[m]
 				LOG("<[src.type]>[src]	UpdateThreat() new_target<[target]> threat<[threat_highest_damage]>")
 
 		ClearThreat()
-			LOG("<[src.type]>[src]	ClearThreat()")
-			threat_damage.Cut()
-			threat_total_damage.Cut()
+			LOGAI("<[src.type]>[src]","ClearThreat()","null")
+			threat_damage = list()
+			threat_total_damage = list()
 
 Threat
 	var
@@ -49,5 +53,5 @@ Threat
 		src.time = time
 		src.damage = damage
 	proc
-		getTime() . = time
-		getDamage() . = damage
+		getTime() return time
+		getDamage() return damage

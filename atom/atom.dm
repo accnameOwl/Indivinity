@@ -10,7 +10,7 @@
 			forget that tile movement is a thing.
 
 		(See my Sub-Pixel Movement library for another way
-		to avoid tile-based code.)
+		to avoid tile-based code
 
 	* Size()
 	* Width()

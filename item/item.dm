@@ -1,6 +1,13 @@
 Item
 	parent_type = /obj
 
+	verb
+		PickUp()
+			set name = "Pick up"
+			set src in view(1)
+			src.loc = usr
+			usr.QuestPeekType(src.type)
+
 	Equipment
 		name = "Equipment"
 		/*
@@ -13,12 +20,6 @@ Item
 		weights = 10
 		*/
 		var/slot = 0
-
-		verb
-			PickUp()
-				set name = "Pick up"
-				set src in view(1)
-				src.loc = usr
 
 		Weights
 			name = "Weights"

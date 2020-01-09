@@ -4,7 +4,9 @@ Monster
 		..()
 		if(!target)
 			FoundTarget(from)
-
+	OnRespawn()
+		..()
+		ShowAreatrigger(src)
 	//ai
 	var
 		//distance related variables
@@ -41,15 +43,15 @@ Monster
 		if(!target)
 			target = m
 			sleeping = 0
-			LOG("<[src.type]>[src]	FoundTarget() target<[target]>")
+			LOGAI(src,"FoundTarget()","[target]")
 			HideAreatrigger()
 			ChaseState()
 
 	ChaseState()
 		set waitfor = 0
 		//conditions
-		if( !target.dead() || !dead() )
-			LOG("<[src.type]>[src]	ChaseState() target<[target]>")
+		if( !target.dead() || !dead() && target.type == "/mob/player")
+			LOGAI(src,"ChaseState()","[target]")
 
 			var
 				dist = get_dist( src, target )
@@ -92,26 +94,24 @@ Monster
 				return ResetState()
 			last_attack_timestamp = world.time
 			DealDamage(target, Stats_Get("strength","value"))
-			LOG("<[src.type]>[src]	AttackState() target<[target]>")
-
+			LOGAI(src,"AttackState()","[target]")
 	ResetState()
-		LOG("<[src.type]>[src]	ResetState()")
+		LOGAI(src,"ResetState()","null")
 		target = null
 		sleeping = 1
 		var/dist = get_dist(src, home_loc)
 		var/dir = get_dir(src, home_loc)
-		while(dist > 4 && !target)
+		while(dist > 2 && !target)
+			if(threat_damage.len)
+				ClearThreat()
 			. = step(src, dir, step_size)
 			if(!.)
 				step_rand(src)
 			dist = get_dist(src, home_loc)
 			dir = get_dir(src, home_loc)
 			sleep(10/world.fps)
-		if(!target)
-			home_loc = src.loc
-			ClearThreat()
-			ShowAreatrigger(src)
-			LOG("<[src.type]>[src]	ResetState() home<[home_loc]>")
+		loc = home_loc
+		ShowAreatrigger(src)
 
 	ShowAreatrigger(Monster/m)
 		if(!areatrigger)
@@ -128,6 +128,7 @@ Monster
 		areatrigger.Relocate(locate(0,0,0))
 
 
+#define AREATRIGGER_ICON
 
 //area trigger for monster ai
 obj/Areatrigger
@@ -142,7 +143,6 @@ obj/Areatrigger
 	proc
 		Relocate(location)
 			src.loc = location
-			LOG("<[src.type]>[src]	Relocate() location<[src.loc]> owner<[owner]>")
 		//The object needs to portray correct bounds in pixel movement.
 		//And also to scale, relative to parent_monster's aggro_dist
 
@@ -166,8 +166,8 @@ obj/Areatrigger
 			bound_height += extra_height * world.icon_size
 
 			//offstep the object on the map, relative to it's size.
-			step_x = ((bound_width / 2) * -1) + world.icon_size/2
-			step_y = ((bound_height / 2) * -1) + world.icon_size/2
+			step_x = ((bound_width / 2) * -1) + world.icon_size
+			step_y = ((bound_height / 2) * -1) + world.icon_size
 
 		/*	Scale()
 		*
@@ -179,14 +179,14 @@ obj/Areatrigger
 		Scale(_x,_y)
 			transform = new/matrix().Scale(_x+1,_y+1)
 
-
 	New(Monster/_owner)
 		owner=_owner
 
 	Crossed(mob/a)
+		#ifdef AREATRIGGER_CROSSED_AI
 		if(isplayer(a) && !owner.dead())
 			owner.FoundTarget(a)
+		#endif
 
 	Del()
-		LOG("&lt;[src.type]&gt;[src]	Del() owner&lt;[owner]&gt;")
 		..()
