@@ -6,17 +6,16 @@ mob
 		debuffs
 	proc
 		AddAura(aura)
-			if(!global.auras[aura])
-				global.auras[aura] = new aura
-				world.log << "[aura] was added to global.auras"
-
-			if(istype(/AURA/Buff, aura))
+			if(istype(aura, /AURA/Buff))
 				if(buffs[aura])
 					buffs[aura].AddStack()
 				else
 					buffs += new aura(usr)
 			if(istype(/AURA/Debuff, aura))
-				debuffs += new aura
+				if(debuffs[aura])
+					debuffs[aura].AddStack()
+				else
+					debuffs += new aura(usr)
 
 		RemoveAura(AURA/aura)
 			if(debuffs[aura])
@@ -26,7 +25,7 @@ mob
 
 
 AURA
-
+	parent_type = /obj
 	var
 		mob/attached_to
 		ID
@@ -38,14 +37,13 @@ AURA
 		time_left = -1#INF
 
 	New(mob/m)
+		m.client.screen += src
 		attached_to = m
 		InitEffect()
-		world.log << "ADDED AURA: [src] - [src.current_stacks]"
 
 	Del()
 		DelEffect()
 		..()
-
 
 
 	proc
@@ -56,26 +54,27 @@ AURA
 			while(time_init)
 				if(world.time >= time_init + duration)
 					time_init = -1#INF
+					break
 				sleep(5)
 			del(src)
 
 		AddStack(amount = 1)
 			time_init = world.time
+			if(max_stacks == 1) return
 			current_stacks = max_stacks - current_stacks ? current_stacks++ : current_stacks
-			world.log << "ADDED AURA'S STACK: [src] - [src.current_stacks]"
 
 
 		InitEffect()
 			attached_to.AddAura(src)
-			world.log << "ADDED AURA: [src]"
 
 		DelEffect()
+			attached_to.client.screen -= src
 			attached_to.RemoveAura(src)
 	Buff
 
 		New(mob/m)
-			..()
-			spawn StartDuration()
+			..(m)
+			StartDuration()
 
 
 		StrongInArms
@@ -83,6 +82,9 @@ AURA
 			duration = 10*10
 
 			max_stacks = 5
+
+			icon = 'strongarms.dmi'
+			screen_loc = "15x15"
 
 			var/buff_ratio = 1.5
 			var/buff_pratio = 0.5

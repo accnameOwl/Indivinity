@@ -102,13 +102,13 @@ world
 
 
 #ifdef LOGCOMBAT
-	#define LOGCOMBAT(source, method, text) world.log << "[world.time]<[source.type]>[source]::[method]{text}"
+	#define LOGCOMBAT(source, method, text) world.log << "[world.time]-[source]::[method]{[text]}"
 #else
 	#define LOGCOMBAT(source, method, text)
 #endif
 
 #ifdef LOGAI //x = source, y=method, z = args
-	#define LOGAI(x,y,z)	world.log << "<[x.type]>x :: [y], arguments: [z]"
+	#define LOGAI(x,y,z)	world.log << "[x]::[y], arguments: [z]"
 #else
 	#define LOGAI(x,y,z)
 #endif
