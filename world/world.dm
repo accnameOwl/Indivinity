@@ -17,6 +17,3 @@ mob
 obj
 	step_size = 8
 
-world
-	mob = /mob/player
-

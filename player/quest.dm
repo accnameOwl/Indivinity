@@ -1,4 +1,68 @@
+
 mob/var/list/quest_list = list()
+var/list/quest_list = list("1" = /Quest/Intro1)
+
+#define QUEST_OBJECTIVE_FLAG_NULL null
+#define QUEST_OBJECTIVE_FLAG_KILL 1
+#define QUEST_OBJECTIVE_FLAG_ITEM 2
+#define QUEST_OBJECTIVE_FLAG_LOCATION 3
+#define QUEST_OBJECTIVE_FLAG_TALKTO 4
+
+#define QUEST_PENDING 		1
+#define QUEST_UNLOCKED 		2
+#define QUEST_INPROGRESS 	3
+#define QUEST_COMPLETED		4
+#define QUEST_DONE			5
+#define QUEST_CALCELED		0
+
+#define QUEST_TYPE_KILL		1
+#define QUEST_TYPE_GATHER	2
+#define QUEST_TYPE_ESCORT	3
+#define QUEST_TYPE_DELIVERY	4
+#define QUEST_TYPE_DEFEND	5
+#define QUEST_TYPE_PROFIT	6
+#define QUEST_TYPE_ACTIVATE	7
+#define QUEST_TYPE_SEARCH	8
+
+
+//initial quest system
+
+Quest
+
+	proc
+		GenerateQuest(q_type=0, id=0, list/poi)
+			//if type is insuficcient, return false value
+			if(!q_type)
+				world.log << "Could not generate quest. type insuficcient"
+				return FALSE
+
+			//new generated quest
+			var/Quest/generated_quest
+
+			switch(q_type)
+				if(QUEST_TYPE_KILL)
+					generated_quest._id = id
+					generated_quest.point_of_interest.Add(arglist(poi))
+			/**
+				if(QUEST_TYPE_GATHER)
+				if(QUEST_TYPE_ESCORT)
+				if(QUEST_TYPE_DELIVERY)
+				if(QUEST_TYPE_DEFEND)
+				if(QUEST_TYPE_PROFIT)
+				if(QUEST_TYPE_ACTIVATE)
+				if(QUEST_TYPE_SEARCH)
+			*/
+
+
+
+
+mob/player
+	proc
+		AddQuest(Quest/quest)
+
+
+
+
 
 Quest
 	var

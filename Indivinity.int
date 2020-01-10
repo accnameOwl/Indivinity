@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1578352664
-DIR: admin atom mob mob\spell monster monster\subtypes npc player player\attacks player\quest screen screen\hud screen\hud\ui screen\images world Lib 
+LAST_COMPILE_TIME: 1578665415
+DIR: combat mob mob\spell monster monster\subtypes options player player\attacks screen screen\hud screen\hud\ui screen\images world 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
-LAST_COMPILE_VERSION: 512.1488
-WINDOW: daycyclus\daynightcycle.dm;mob\spell\spell.dm;combat\cooldown.dm;combat\RenderDamageText.dm;monster\Threat.dm;combat\DealDamage.dm;combat\enteredcombat.dm;combat\combat_flags.dm;combat\exitedcombat.dm;combat\HealthRegeneration.dm;combat\ManaRegeneration.dm;combat\OnDamage.dm;combat\ondeath.dm;combat\onrespawn.dm;combat\SetTarget.dm;combat\stat.dm;combat\turnghost.dm;monster\_Monster.dm;monster\AI.dm;#define.dm;client\keybinds.dm;screen\hud\ui\UIShow.dm;screen\hud\hud.dm;screen\hud\TargetUI.dm;admin\tools.dm;atom\atom.dm;player\onlogin.dm;Indivinity.dme;daycyclus\lighting.dm;mob\Save.dm
-FILE: mob\Save.dm
+LAST_COMPILE_VERSION: 512.1466
+WINDOW: player\AuraEffect.dm;player\attacks\firearrow.dm;player\attacks\_spell_cooldowns.dm;screen\hud\ui\Button.dm;screen\hud\TargetUI.dm;options\options.dm;client\keybinds.dm;client\keybinds_combat.dm;player\attacks\VoidSpear.dm;mob\spell\spell.dm;#define.dm;player\quest.dm;types.dm;daycyclus\daynightcycle.dm;daycyclus\lighting.dm;daycyclus\daycyclus.dmi;daycyclus\daycyclusLight.dmi;player\onlogin.dm;player\Stats.dm;player\Texture.dm;player\_player.dm;combat\cooldown.dm;mob\Save.dm;world\world.dm;combat\combat_flags.dm;mob\Stats.dm
+FILE: combat\combat_flags.dm
 */
 // END_INTERNALS

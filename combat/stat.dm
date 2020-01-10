@@ -46,6 +46,8 @@ Stat/proc
 		vars[variable] += value
 	Sub(variable, value)
 		vars[variable] -= value
+	Multiply(variable, value)
+		vars[variable] *= value
 
 
 //mob gain experience for _stats
@@ -72,4 +74,7 @@ mob/proc
 		. = combat_stats[name].Get(variable)
 	Stats_Sub( name, variable, value)
 		combat_stats[name].Sub(variable, value)
+		. = combat_stats[name].Get(variable)
+	Stats_Multiply( name, variable, value )
+		combat_stats[name].Multiply(variable, value)
 		. = combat_stats[name].Get(variable)

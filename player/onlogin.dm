@@ -6,7 +6,7 @@ mob/player
 		if(!CheckBan(src.key))
 			src << "You are in the banlist"
 
-		if(!src.Read("savefile/[ckey].sav"))
+		if(!src.Read("saves/[copytext(src.ckey,1,2)]/[src.ckey].sav"))
 			src.loc = locate(20,20,1)
 
 			if(src.key == "Tafe")

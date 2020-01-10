@@ -40,8 +40,8 @@ mob
 			cooldowns[id] = (offset ? world.time + duration : duration)
 			cooldown_preserve[id] = preserve
 
-	Read(savefile/F)
-		..()
+	Read(var/savefile/F,neversave=null)
+		..(F,neversave)
 		var/timeoffset = world.time
 		var/realoffset = world.realtime + timeoffset
 		var/list/cdl = cooldowns, list/cdp = cooldown_preserve, ncd

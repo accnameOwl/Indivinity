@@ -5,7 +5,7 @@ mob
 	var
 		//list of personal flags, related to combat.
 
-		list/combat_flags = list(\
+		tmp/list/combat_flags = list(\
 			"dead" = FALSE,
 			"can_respawn" = TRUE,
 			"respawn_time" = 50,

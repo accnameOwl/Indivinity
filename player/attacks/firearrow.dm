@@ -6,7 +6,8 @@ mob/player/verb
 		set category = "Combat"
 		var/mana_cost = 50
 		if(!OnCooldown("firearrow") && !OnCooldown("GCD") && target  && Stats_Get("mana","value") >= mana_cost)
-			var/d = Stats_Get("intellect","value")*1.1
+			AddAura(/AURA/Buff/StrongInArms)
+			var/d = Stats_Get("strength","value")*1.1
 			SetCooldown("firearrow", FIREARROW_CD)
 			SetCooldown("GCD",GCD_CD)
 			src.Stats_AddExperience("intellect", 30)
