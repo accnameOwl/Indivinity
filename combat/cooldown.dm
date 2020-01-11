@@ -11,7 +11,7 @@
 #define PRESERVE_WORLDTIME 1
 #define PRESERVE_REALTIME 2
 mob
-	var
+	var/tmp
 		list/cooldowns
 		list/cooldown_preserve
 

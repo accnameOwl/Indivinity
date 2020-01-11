@@ -1,22 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-<<<<<<< HEAD
-LAST_COMPILE_TIME: 1578684190
-DIR: client combat mob mob\spell monster monster\subtypes options player player\attacks screen screen\hud screen\hud\ui screen\images world 
+LAST_COMPILE_TIME: 1578750234
+DIR: client combat item mob mob\spell monster\subtypes options player player\attacks screen screen\hud screen\hud\ui screen\images 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 512.1466
-WINDOW: player\attacks\_spell_cooldowns.dm;screen\hud\ui\Button.dm;screen\hud\TargetUI.dm;options\options.dm;client\keybinds.dm;client\keybinds_combat.dm;player\attacks\VoidSpear.dm;mob\spell\spell.dm;combat\combat_flags.dm;mob\_mob.dm;mob\Castbar.dm;mob\Del.dm;mob\Login.dm;mob\logout.dm;mob\Save.dm;mob\Stats.dm;mob\Step.dm;player\strongarms.dmi;player\attacks\Glitterlance.dm;player\attacks\GoldSpears.dm;#define.dm;player\Equipments.dm;player\Inventory.dm;player\Move.dm;player\onlogin.dm;player\quest.dm;player\Stats.dm;player\Texture.dm;client\Move.dm;client\client.dm
-FILE: client\client.dm
-=======
-LAST_COMPILE_TIME: 1578725057
-DIR: client combat daycyclus mob mob\spell monster monster\subtypes options player player\attacks screen screen\hud screen\hud\ui screen\images world 
-AUTO_FILE_DIR: ON
-MAP_ICON_TYPE: 0
-LAST_COMPILE_VERSION: 512.1488
-WINDOW: player\AuraEffect.dm;player\attacks\firearrow.dm;player\attacks\_spell_cooldowns.dm;screen\hud\ui\Button.dm;screen\hud\TargetUI.dm;options\options.dm;client\keybinds.dm;client\keybinds_combat.dm;player\attacks\voidspear.dm;mob\spell\spell.dm;daycyclus\clouds.dm;daycyclus\cloudshadow.dmi
-FILE: daycyclus\clouds.dm
->>>>>>> master
+WINDOW: player\AuraEffect.dm;player\attacks\firearrow.dm;player\attacks\_spell_cooldowns.dm;screen\hud\ui\Button.dm;screen\hud\TargetUI.dm;options\options.dm;client\keybinds.dm;client\keybinds_combat.dm;player\attacks\VoidSpear.dm;mob\spell\spell.dm;daycyclus\clouds.dm;mob\Save.dm;mob\Stats.dm;mob\New.dm;combat\cooldown.dm;player\onlogin.dm;client\Move.dm;client\updateloop.dm;client\client.dm;atom\atom.dm;player\Texture.dm;player\Stats.dm;player\quest.dm;screen\hud\Hud.dm;screen\hud\ui\ChatWindow.dm;item\item.dm
+FILE: mob\Save.dm
 */
 // END_INTERNALS

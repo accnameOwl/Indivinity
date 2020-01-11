@@ -1,0 +1,86 @@
+
+Information:
+
+    `Extending vscode extention:Todo+`
+
+    - Start tasks: Alt+S
+    - Complete tasks: Alt+D
+        Move task to relative category ie. there is a section for New and Done tasks.
+    - document tasks with underlaying text describing the issue
+    - Bugs are to be marked with tags: @critical @high @low @today 
+
+    Formatting:
+        *bold* _italic_ ~strikethrough~ `code`
+        @tag
+        file://location.ext
+        url:http://google.com 
+        ☐ Press Alt+Enter to create a new Todo
+        ☐ Press Alt+S to mark a todo with a start date @started(20-01-11 15:11)
+        ✔ Press Alt+D to mark a todo as Done @started(20-01-11 15:12) @done(20-01-11 15:12) @lasted(11s)
+        ✘ Press Alt+C to mark a todo as Cancelled @cancelled(20-01-11 15:12)
+
+
+Todo:
+    New:
+        Graphics:
+            ☐ Player base texture w/ animations
+            ☐ Create visual effects for player levelup 
+        Player UI:
+            ☐ New unit frames
+            ☐ Menu bar
+            ☐ Action bar
+                swapable abilities
+            ☐ Spell book
+                class specific abilities
+            ☐ Inventory
+                Complete `Engine: inventory system` beforehand
+        Character design:
+            ☐ Class identity
+                Role specific classes i.e healer, tank, dps
+        Engine:
+            ☐ Client-to-server synced pixel movements
+                checkout MoveLoop() file:updateloop.dm,15
+            ☐ Inventory system
+                checkout file:Inventory.dm
+            ☐ Aura's(Buffs/Debuffs)
+                checkout file:AuraEffect.dm
+            ☐ Items and equipment
+                checkout file:item.dm
+    Done:
+        Graphics:
+        Player UI:
+        Character design:
+        Engine:
+    Cancelled:
+        Graphics:
+        Player UI:
+        Character design:
+        Engine:
+
+Bugs:
+    New:
+        ☐ Weather issue: Clouds are not spawning correctly @low 
+        Savesystem: 
+            ` Issues may be resolved once recursion is fixed.`
+            ☐ Recursive loading of clients @critical
+                /mob/player/Login() is called recursively 
+                source file: Save.dm
+            ☐ error recieving variable list of cooldowns @critical 
+                runtime error: cannot read null.len
+                proc name: Read(/mob/Read)
+                source file: cooldown.dm,61
+                usr: (src)
+                src: Owl(/mob/player)
+                src.loc: null
+            ☐ Day cycle: lighting background unable to locate src @high
+                runtime error: Undefined operation: "27x16" * 2
+                proc name: New (/obj/backdrop/New)
+                    source file: lighting.dm,16
+                    usr: Owl (/mob/player)
+                    src: the backdrop (/obj/backdrop)
+                    usr.loc: the grass (1,1,1) (/turf/outside/grass)
+                    src.loc: null
+                    call stack: -
+                    the backdrop (/obj/backdrop): New()
+                    the darkness (/obj/planes/darkness): New()
+    Resolved:

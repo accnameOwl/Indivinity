@@ -1,7 +1,7 @@
 var/list/online_players = list()
 
 mob/player
-	OnLogin()
+	Login()
 		online_players.Add(src)
 		if(!CheckBan(src.key))
 			src << "You are in the banlist"
@@ -33,10 +33,12 @@ mob/player
 		spawn() ManaRegeneration()
 		LOG("&lt;[src.type]&gt;[src]	OnLogin()")
 
+		..()
 
-	OnLogout()
+
+	Logout()
 		online_players[src.key] = null
-
+		..()
 cpu_text
 	parent_type = /obj
 

@@ -13,7 +13,7 @@
 
 
 
-#define RENDER_CLOUDS 1		// set to 0 before compiling to disable cloud rendering in a build.
+#define RENDER_CLOUDS 1// set to 0 before compiling to disable cloud rendering in a build.
 
 
 var
@@ -24,7 +24,7 @@ var
 
 /////////////////////////////////////
 world/New()
-	..()						/// <----------- avoid having multiple world/New()'s. if you have one, plug this into it instead.
+	..() 							/// <----------- avoid having multiple world/New()'s. if you have one, plug this into it instead.
 	spawn(30)
 		cloud_render_loop()
 
