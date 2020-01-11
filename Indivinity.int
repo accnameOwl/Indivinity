@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1578665422
-DIR: combat mob mob\spell monster monster\subtypes options player player\attacks screen screen\hud screen\hud\ui screen\images world 
+LAST_COMPILE_TIME: 1578725057
+DIR: client combat daycyclus mob mob\spell monster monster\subtypes options player player\attacks screen screen\hud screen\hud\ui screen\images world 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
-LAST_COMPILE_VERSION: 512.1466
-WINDOW: player\AuraEffect.dm;player\attacks\firearrow.dm;player\attacks\_spell_cooldowns.dm;screen\hud\ui\Button.dm;screen\hud\TargetUI.dm;options\options.dm;client\keybinds.dm;client\keybinds_combat.dm;player\attacks\VoidSpear.dm;mob\spell\spell.dm;#define.dm;player\quest.dm;types.dm;daycyclus\daynightcycle.dm;daycyclus\lighting.dm;daycyclus\daycyclus.dmi;daycyclus\daycyclusLight.dmi;player\onlogin.dm;player\Stats.dm;player\Texture.dm;player\_player.dm;combat\cooldown.dm;mob\Save.dm;world\world.dm;combat\combat_flags.dm;mob\Stats.dm
-FILE: combat\combat_flags.dm
+LAST_COMPILE_VERSION: 512.1488
+WINDOW: player\AuraEffect.dm;player\attacks\firearrow.dm;player\attacks\_spell_cooldowns.dm;screen\hud\ui\Button.dm;screen\hud\TargetUI.dm;options\options.dm;client\keybinds.dm;client\keybinds_combat.dm;player\attacks\voidspear.dm;mob\spell\spell.dm;daycyclus\clouds.dm;daycyclus\cloudshadow.dmi
+FILE: daycyclus\clouds.dm
 */
 // END_INTERNALS
