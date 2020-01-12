@@ -7,6 +7,7 @@
 
 // BEGIN_FILE_DIR
 #define FILE_DIR .
+#define FILE_DIR "daycyclus"
 #define FILE_DIR "icons"
 #define FILE_DIR "icons/other"
 #define FILE_DIR "player"
@@ -51,6 +52,7 @@
 #include "combat\stat.dm"
 #include "combat\turnghost.dm"
 #include "inventory\inventory.dm"
+#include "item\database.dm"
 #include "item\item.dm"
 #include "mob\_mob.dm"
 #include "mob\Castbar.dm"

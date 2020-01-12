@@ -1,3 +1,5 @@
+
+
 Item
 	parent_type = /obj
 
@@ -24,10 +26,6 @@ Item
 		Weights
 			name = "Weights"
 			slot = 10
-
-
-
-
 
 
 mob/player

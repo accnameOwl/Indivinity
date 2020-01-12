@@ -44,13 +44,18 @@ Todo:
                 checkout file:Inventory.dm
             ☐ Aura's(Buffs/Debuffs)
                 checkout file:AuraEffect.dm
-            ☐ Items and equipment
-                checkout file:item.dm
+            ☐ Create Item system which concludes a databased system for items.
+                database shall be stored as /item_db
+                The values shall be made as lists with given values. check file:database.dm
     Done:
         Graphics:
         Player UI:
         Character design:
         Engine:
+            ✔ Item database structure. @started(20-01-12 16:16) @done(20-01-12 16:53) @lasted(37m6s)
+                build structure of items, storing available items, hashed with an ID.
+                stored through world/db[]
+                - Intended as reference for unknown future
     Cancelled:
         Graphics:
         Player UI:

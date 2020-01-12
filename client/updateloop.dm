@@ -5,13 +5,7 @@ client
 		if((. = ..()))
 			spawn MoveLoop()
 			spawn UIUpdate()
-
-
-
-
-
 	proc
-
 		MoveLoop()
 			set waitfor = 0
 			var/list/k = keybinds

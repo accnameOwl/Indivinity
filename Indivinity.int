@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1578750234
+LAST_COMPILE_TIME: 1578844362
 DIR: client combat item mob mob\spell monster\subtypes options player player\attacks screen screen\hud screen\hud\ui screen\images 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 512.1466
-WINDOW: player\AuraEffect.dm;player\attacks\firearrow.dm;player\attacks\_spell_cooldowns.dm;screen\hud\ui\Button.dm;screen\hud\TargetUI.dm;options\options.dm;client\keybinds.dm;client\keybinds_combat.dm;player\attacks\VoidSpear.dm;mob\spell\spell.dm;daycyclus\clouds.dm;mob\Save.dm;mob\Stats.dm;mob\New.dm;combat\cooldown.dm;player\onlogin.dm;client\Move.dm;client\updateloop.dm;client\client.dm;atom\atom.dm;player\Texture.dm;player\Stats.dm;player\quest.dm;screen\hud\Hud.dm;screen\hud\ui\ChatWindow.dm;item\item.dm
-FILE: mob\Save.dm
+WINDOW: player\AuraEffect.dm;player\attacks\firearrow.dm;player\attacks\_spell_cooldowns.dm;screen\hud\ui\Button.dm;screen\hud\TargetUI.dm;options\options.dm;client\keybinds.dm;client\keybinds_combat.dm;player\attacks\VoidSpear.dm;mob\spell\spell.dm;combat\turnghost.dm;combat\cooldown.dm;combat\combat_flags.dm;item\item.dm;combat\stat.dm;item\database.dm;client\Move.dm;client\updateloop.dm
+FILE: item\database.dm
 */
 // END_INTERNALS
