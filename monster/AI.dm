@@ -128,7 +128,7 @@ Monster
 		areatrigger.Relocate(locate(0,0,0))
 
 
-#define AREATRIGGER_ICON
+//#define AREATRIGGER_ICON
 
 //area trigger for monster ai
 obj/Areatrigger

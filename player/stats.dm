@@ -11,3 +11,6 @@ mob/player/New()
 
 		"strength" = new/Stat("strength", 500, 1, 100),
 		"intellect" = new/Stat("intellect", 500000, 1, 100))
+
+mob/player/var
+	threat_multiplier = 0.00

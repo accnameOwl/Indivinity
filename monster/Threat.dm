@@ -16,15 +16,15 @@ Monster
 
 	proc
 
-		UpdateThreat(mob/m, _damage)
+		UpdateThreat(mob/player/m, _damage)
 			if(!threat_damage[m])
 				threat_damage[m] = list()
 			if(!target)
 				FoundTarget(m)
 
 
-			threat_damage[m].Add(new/Threat(world.time, _damage))
-			threat_total_damage[m] += _damage
+			threat_damage[m].Add(new/Threat(world.time, _damage * m.threat_multiplier))
+			threat_total_damage[m] += _damage * m.threat_multiplier
 
 			//clear threat that is out of thread_duration.
 			//this is to remove bloatstored damage that is irrelevant.
