@@ -6,7 +6,7 @@ DIR: client combat item mob mob\spell monster monster\subtypes options player pl
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 512.1466
-WINDOW: player\AuraEffect.dm;player\attacks\firearrow.dm;player\attacks\_spell_cooldowns.dm;screen\hud\ui\Button.dm;screen\hud\TargetUI.dm;options\options.dm;client\keybinds.dm;client\keybinds_combat.dm;player\attacks\VoidSpear.dm;mob\spell\spell.dm;item\database.dm;monster\AI.dm
+WINDOW: player\AuraEffect.dm;player\attacks\firearrow.dm;player\attacks\_spell_cooldowns.dm;screen\hud\ui\Button.dm;screen\hud\TargetUI.dm;options\options.dm;client\keybinds.dm;client\keybinds_combat.dm;player\attacks\voidspear.dm;mob\spell\spell.dm;monster\AI.dm
 FILE: monster\AI.dm
 */
 // END_INTERNALS
